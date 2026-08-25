@@ -23,6 +23,10 @@
 # misc
 .DS_Store
 *.pem
+/.tools/
+/coursework/*.b64
+/coursework/*-chunks.txt
+/coursework/*-upload.png
 
 # debug
 npm-debug.log*

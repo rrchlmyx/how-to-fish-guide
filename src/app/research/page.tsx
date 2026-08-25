@@ -54,14 +54,14 @@ const matrix = [
 ];
 
 const sourceRows = [
-  ["Official facts", "Steam store", "store.steampowered.com/app/3658370", "Release, developer, platform, premise"],
-  ["Trend", "SteamDB / launch reporting", "steamdb.info + Gamemeca", "Launch date, concurrent-player trajectory"],
-  ["Progression", "AllThings.How", "allthings.how", "Island order, hand-ins, bosses"],
-  ["Progression", "GrindNStrat", "grindnstrat.com", "Controls, islands, weapons, cooking"],
-  ["Lures", "NerdsChalk", "nerdschalk.com", "Lure tiers, catch pools, values"],
-  ["Lures", "TposeGaming", "tposegaming.com", "Regular and boss bait structure"],
-  ["Collection", "Times of India / IndieBunny", "timesofindia.com + indiebunny.com", "Fish list and collector checks"],
-  ["Cross-check", "How to Fish Game Wiki", "howtofishgame.wiki", "Beginner priorities and quest safety"],
+  ["Official facts", "Steam store", "https://store.steampowered.com/app/3658370/How_to_Fish/", "Release, developer, platform, premise"],
+  ["Progression", "AllThings.How", "https://allthings.how/how-to-fish-full-island-and-boss-progression-walkthrough/", "Island order, hand-ins, bosses"],
+  ["Progression", "GrindNStrat", "https://grindnstrat.com/how-to-fish-game-islands-guide/", "Controls, islands, weapons, cooking"],
+  ["Lures", "NerdsChalk", "https://nerdschalk.com/how-to-fish-every-lure-bait-catch/", "Lure tiers, catch pools, values"],
+  ["Lures", "TposeGaming", "https://tposegaming.com/how-to-fish-game-bait/", "Regular and boss bait structure"],
+  ["Collection", "Times of India", "https://timesofindia.indiatimes.com/sports/esports/news/how-to-fish-list-of-all-fish-how-to-get-them-and-more/articleshow/133438002.cms", "Fish list and collector checks"],
+  ["Collection", "IndieBunny", "https://indiebunny.com/news/how-to-fish-lure-guide-every-fish-boss-by-island-location", "Fish and boss locations"],
+  ["Cross-check", "How to Fish Game Wiki", "https://howtofishgame.wiki/guides/getting-started", "Beginner priorities and quest safety"],
 ];
 
 export default function ResearchPage() {
@@ -154,22 +154,23 @@ export default function ResearchPage() {
         </div>
 
         <div className="research-block">
-          <div className="research-heading"><span>06</span><h2>Initial data review and supplement plan</h2></div>
+          <div className="research-heading"><span>04</span><h2>Initial data review and supplement plan</h2></div>
           <div className="review-grid">
-            <div><span>Measurement window</span><strong>Pre-launch baseline</strong></div>
-            <div><span>GSC impressions</span><strong>Pending deployment</strong></div>
-            <div><span>Clicks / position</span><strong>No data yet</strong></div>
-            <div><span>GA visitors</span><strong>No data yet</strong></div>
+            <div><span>Measurement window</span><strong>First hour after launch</strong></div>
+            <div><span>GSC sitemap</span><strong>Success · 16 pages found</strong></div>
+            <div><span>Search performance</span><strong>Awaiting first query sample</strong></div>
+            <div><span>GA realtime</span><strong>1 active visitor observed</strong></div>
           </div>
-          <h3>First three supplement pages after data arrives</h3>
+          <h3>First three evidence-gated supplement pages</h3>
           <ol className="supplement-list">
-            <li><strong>All fish values and sell prices</strong><span>Build if fish/value queries receive impressions.</span></li>
-            <li><strong>Boss lure locations</strong><span>Split from the lure guide if specific bait queries rank.</span></li>
-            <li><strong>Volcano and whale walkthrough</strong><span>Build if endgame queries appear in GSC.</span></li>
+            <li><strong>Co-op and multiplayer</strong><span>Publish after official and independent gameplay sources confirm the flow, prioritizing it if related queries appear.</span></li>
+            <li><strong>Quest items and trophies</strong><span>Publish only after quantities and recipients are checked against current in-game quest text.</span></li>
+            <li><strong>Fish prices and cooking</strong><span>Build from a tested price table, or split it out when price and cooking queries receive impressions.</span></li>
           </ol>
           <p className="method-note">
-            This is explicitly a pre-launch plan. Real figures will replace “pending” only
-            after deployment, GSC verification, sitemap submission, and GA traffic.
+            The first-hour sample proves deployment, Search Console, sitemap, and analytics
+            collection are connected; it does not prove rankings or content performance.
+            Page priorities will be revised when the first GSC query report is available.
           </p>
         </div>
       </section>

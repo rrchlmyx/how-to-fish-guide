@@ -15,7 +15,12 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://hookandhaul.vercel.app"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://how-to-fish-guide-mu.vercel.app",
+  ),
+  verification: {
+    google: "GcHdUjpDMNXHh259BUDUqo8uOewU6bmmEE9SL82oKOI",
+  },
   title: {
     default: "Hook & Haul — How to Fish Game Guides",
     template: "%s | Hook & Haul",

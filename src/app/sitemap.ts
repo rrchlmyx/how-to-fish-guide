@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { guides } from "@/lib/guides";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hookandhaul.vercel.app";
+const baseUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://how-to-fish-guide-mu.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const updated = new Date("2026-08-25T00:00:00.000Z");

@@ -11,7 +11,7 @@ export default function PrivacyPage() {
     <InfoPage
       eyebrow="Legal"
       title="Privacy policy"
-      intro="This policy describes the information a basic guide site may process. It will be updated before analytics or advertising is enabled."
+      intro="This policy describes the information Hook & Haul and its service providers may process."
       sections={[
         {
           title: "Basic server data",
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         },
         {
           title: "Analytics",
-          body: "If privacy-conscious analytics or Google Analytics is enabled, this page will identify the provider and available controls. No analytics identifier is active until it is explicitly configured.",
+          body: "Hook & Haul uses Google Analytics 4 to understand aggregate site usage. Google may process device, browser, approximate location, and interaction data under its own privacy terms. The site configures IP anonymization and does not use analytics data to sell personal information.",
         },
         {
           title: "External links",

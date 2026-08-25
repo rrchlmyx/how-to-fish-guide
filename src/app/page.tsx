@@ -1,7 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCard } from "@/components/guide-card";
 import { FishMark, PageFrame } from "@/components/site-shell";
 import { guides } from "@/lib/guides";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   const featured = guides.slice(0, 6);
@@ -15,7 +20,7 @@ export default function Home() {
         </div>
         <div className="shell hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow">Independent field guide · Updated daily</span>
+            <span className="eyebrow">Independent field guide · Updated Aug 25, 2026</span>
             <h1>
               Catch smarter.
               <br />

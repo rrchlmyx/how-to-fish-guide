@@ -75,15 +75,14 @@
 
 ## 关卡 5：网站上线和数据接入结果
 
-待完成的外部账号步骤：
+完成状态：
 
-- 创建远程 GitHub 仓库并推送代码。
-- 导入 Vercel 并取得公开链接。
-- 设置 `NEXT_PUBLIC_SITE_URL`。
-- 在 GA4 创建 Web 数据流，设置 `NEXT_PUBLIC_GA_ID` 并重新部署。
-- 在 GSC 验证网站、请求首页索引并提交 `/sitemap.xml`。
-
-代码已经预留 GA4 环境变量并生成 `/robots.txt` 与 `/sitemap.xml`。账号授权成功后补入线上链接和验证截图。
+- 生产网站：`https://how-to-fish-guide-mu.vercel.app/`
+- GitHub：`https://github.com/rrchlmyx/how-to-fish-guide`
+- GSC：网址前缀资源已通过 HTML 元标记验证。
+- Sitemap：`/sitemap.xml` 已提交成功，GSC 首次读取发现 16 个网页。
+- GA4：衡量 ID `G-S9Y1GGYZ2B` 已接入，实时报告已收到访问。
+- 复核修正：原 sitemap 与 robots 的默认域名仍为旧占位地址，现已统一为实际生产域名并重新部署。
 
 本关收获文案：
 
@@ -91,15 +90,15 @@
 
 ## 关卡 6：数据复盘和补页计划
 
-初始复盘见：`research-workbook.png` 第四部分。
+首次上线复盘见：`06-data-review.png`。
 
-当前状态为网站上线前基线，因此 GSC 展示、点击、平均排名与搜索词均暂无真实数据，不能编造。
+当前可确认生产部署、GSC 验证、sitemap 读取和 GA4 实时采集链路均已打通。网站上线时间不足 1 天，GSC 尚未形成可用于判断自然搜索表现的曝光、点击、平均排名和查询词样本，因此不据首小时访问量判断 SEO 成败。
 
 首轮候选补页计划：
 
-1. All fish values and sell prices：当 fish/value 类搜索开始获得展示时建立完整价格页。
-2. Boss lure locations：当具体 bait/lure 查询有展示时，从现有诱饵页拆出独立页面。
-3. Volcano and whale walkthrough：当 endgame/whale 查询出现时补充独立终局攻略。
+1. Co-op / multiplayer：官方与实机来源核验完成，且 GSC 出现相关查询后优先发布。
+2. Quest items / trophies：按当前游戏内任务文本核验数量与交付对象后发布，避免复制冲突数值。
+3. Fish prices / cooking：完成实测价格表，或 GSC 出现 price/cooking 查询后从现有页面拆分。
 
 本关收获文案：
 
