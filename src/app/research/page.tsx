@@ -53,15 +53,32 @@ const matrix = [
   ["Collection", "how to fish achievements", "/guides/achievements", "Story and cleanup roadmap", "P1"],
 ];
 
+const keywordRows = [
+  ["General need", "how to fish game", "Understand the game and find the main route", "Home"],
+  ["General need", "how to fish beginner guide", "Plan the first hour and avoid costly mistakes", "Beginner guide"],
+  ["General need", "how to fish controls", "Learn keyboard, fishing, combat, and hand-ins", "Controls guide"],
+  ["Specific need", "how to fish islands", "Find the unlock order and required quest items", "Islands guide"],
+  ["Specific need", "how to fish lures", "Match lure tiers and boss bait to locations", "Lures guide"],
+  ["Specific need", "how to fish fish list", "Check species by island and collection progress", "Fish list"],
+  ["Specific need", "how to fish best weapons", "Choose purchases and upgrades in the right order", "Weapons guide"],
+  ["Specific need", "how to fish money guide", "Build a repeatable farming and selling loop", "Money guide"],
+  ["Specific need", "how to fish bosses", "Trigger bosses and protect required trophies", "Boss guide"],
+  ["Specific need", "how to fish radar", "Understand markers, routes, and boat upgrades", "Radar guide"],
+  ["Specific need", "how to fish achievements", "Plan story achievements and cleanup", "Achievements guide"],
+];
+
 const sourceRows = [
-  ["Official facts", "Steam store", "https://store.steampowered.com/app/3658370/How_to_Fish/", "Release, developer, platform, premise"],
-  ["Progression", "AllThings.How", "https://allthings.how/how-to-fish-full-island-and-boss-progression-walkthrough/", "Island order, hand-ins, bosses"],
-  ["Progression", "GrindNStrat", "https://grindnstrat.com/how-to-fish-game-islands-guide/", "Controls, islands, weapons, cooking"],
-  ["Lures", "NerdsChalk", "https://nerdschalk.com/how-to-fish-every-lure-bait-catch/", "Lure tiers, catch pools, values"],
-  ["Lures", "TposeGaming", "https://tposegaming.com/how-to-fish-game-bait/", "Regular and boss bait structure"],
-  ["Collection", "Times of India", "https://timesofindia.indiatimes.com/sports/esports/news/how-to-fish-list-of-all-fish-how-to-get-them-and-more/articleshow/133438002.cms", "Fish list and collector checks"],
-  ["Collection", "IndieBunny", "https://indiebunny.com/news/how-to-fish-lure-guide-every-fish-boss-by-island-location", "Fish and boss locations"],
-  ["Cross-check", "How to Fish Game Wiki", "https://howtofishgame.wiki/guides/getting-started", "Beginner priorities and quest safety"],
+  ["/", "Steam · store.steampowered.com/app/3658370", "Wiki · howtofishgame.wiki/guides/getting-started", "Release facts, premise, route entry points"],
+  ["/guides/beginner-guide", "Wiki · howtofishgame.wiki/guides/getting-started", "GrindNStrat · /how-to-fish-game-islands-guide/", "First-hour priorities, quest safety, early loop"],
+  ["/guides/controls", "GrindNStrat · /how-to-fish-game-islands-guide/", "Steam · store.steampowered.com/app/3658370", "Controls, fishing actions, combat context"],
+  ["/guides/islands-progression", "AllThings.How · /full-island-and-boss-progression-walkthrough/", "AllThings.How · /how-to-unlock-every-island-forest-desert-rocks-volcano/", "Island order, hand-ins, boss gates"],
+  ["/guides/lures-and-baits", "NerdsChalk · /how-to-fish-every-lure-bait-catch/", "TposeGaming · /how-to-fish-game-bait/", "Lure tiers, catch pools, boss bait"],
+  ["/guides/fish-list", "Times of India · /list-of-all-fish-how-to-get-them/", "AllThings.How · /all-fish-species-by-island-and-how-to-catch-them/", "Species, islands, collection checks"],
+  ["/guides/weapons-and-upgrades", "AllThings.How · /the-upgrades-and-weapons-worth-buying-first/", "GrindNStrat · /how-to-fish-game-islands-guide/", "Purchase order, weapons, upgrades"],
+  ["/guides/money-guide", "NerdsChalk · /how-to-fish-every-lure-bait-catch/", "GrindNStrat · /how-to-fish-game-islands-guide/", "Catch values, cooking, repeatable farming loop"],
+  ["/guides/bosses", "AllThings.How · /full-island-and-boss-progression-walkthrough/", "IndieBunny · /lure-guide-every-fish-boss-by-island-location", "Boss triggers, locations, trophies"],
+  ["/guides/radar-and-navigation", "AllThings.How · /how-to-unlock-every-island-forest-desert-rocks-volcano/", "Wiki · howtofishgame.wiki/guides/getting-started", "Routes, markers, unlock context"],
+  ["/guides/achievements", "Steam Community · /stats/3658370/achievements", "Wiki · howtofishgame.wiki/guides/getting-started", "Achievement list, story order, cleanup"],
 ];
 
 export default function ResearchPage() {
@@ -78,7 +95,7 @@ export default function ResearchPage() {
         </div>
       </section>
       <section className="shell research-sheet">
-        <div className="research-block">
+        <div className="research-block" id="game-judgment">
           <div className="research-heading"><span>01</span><h2>Three-game judgment table</h2></div>
           <p className="method-note">
             KD and monthly volume: Natiad US Google index, checked Aug 25. Trend labels
@@ -115,8 +132,26 @@ export default function ResearchPage() {
           </div>
         </div>
 
-        <div className="research-block">
-          <div className="research-heading"><span>02</span><h2>Keyword and page matrix</h2></div>
+        <div className="research-block" id="keyword-inventory">
+          <div className="research-heading"><span>02</span><h2>Keyword inventory by user need</h2></div>
+          <div className="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Need type</th><th>Keyword</th><th>User question</th><th>Planned page</th></tr>
+              </thead>
+              <tbody>
+                {keywordRows.map((row) => (
+                  <tr key={row[1]}>
+                    {row.map((cell, index) => <td key={cell}>{index === 1 ? <strong>{cell}</strong> : cell}</td>)}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div className="research-block" id="page-matrix">
+          <div className="research-heading"><span>03</span><h2>Keyword and page matrix</h2></div>
           <div className="table-wrap">
             <table>
               <thead>
@@ -133,12 +168,12 @@ export default function ResearchPage() {
           </div>
         </div>
 
-        <div className="research-block">
-          <div className="research-heading"><span>03</span><h2>Page source record</h2></div>
+        <div className="research-block" id="source-record">
+          <div className="research-heading"><span>04</span><h2>Page-by-page source record</h2></div>
           <div className="table-wrap">
             <table>
               <thead>
-                <tr><th>Use</th><th>Source</th><th>Address</th><th>What was verified</th></tr>
+                <tr><th>Planned page</th><th>Source 1</th><th>Source 2</th><th>What they support</th></tr>
               </thead>
               <tbody>
                 {sourceRows.map((row) => (
@@ -153,13 +188,15 @@ export default function ResearchPage() {
           </p>
         </div>
 
-        <div className="research-block">
-          <div className="research-heading"><span>04</span><h2>Initial data review and supplement plan</h2></div>
+        <div className="research-block" id="data-review">
+          <div className="research-heading"><span>05</span><h2>Initial data review and supplement plan</h2></div>
           <div className="review-grid">
-            <div><span>Measurement window</span><strong>First hour after launch</strong></div>
+            <div><span>Website</span><strong>how-to-fish-guide-mu.vercel.app</strong></div>
+            <div><span>GSC total impressions</span><strong>0 available</strong></div>
+            <div><span>GSC total clicks</span><strong>0 available</strong></div>
             <div><span>GSC sitemap</span><strong>Success · 16 pages found</strong></div>
-            <div><span>Search performance</span><strong>Awaiting first query sample</strong></div>
             <div><span>GA realtime</span><strong>1 active visitor observed</strong></div>
+            <div><span>Current decision</span><strong>Technical check, then re-review</strong></div>
           </div>
           <h3>First three evidence-gated supplement pages</h3>
           <ol className="supplement-list">
@@ -168,9 +205,10 @@ export default function ResearchPage() {
             <li><strong>Fish prices and cooking</strong><span>Build from a tested price table, or split it out when price and cooking queries receive impressions.</span></li>
           </ol>
           <p className="method-note">
-            The first-hour sample proves deployment, Search Console, sitemap, and analytics
-            collection are connected; it does not prove rankings or content performance.
-            Page priorities will be revised when the first GSC query report is available.
+            GSC is still processing the new property, so zero available impressions and
+            clicks are a baseline—not proof of failure. Next reviews: day 7 on September 1
+            and day 14 on September 8. Page priorities will be revised only after the first
+            valid query report is available.
           </p>
         </div>
       </section>

@@ -24,7 +24,10 @@
 
 ## 关卡 2：关键词清单和页面矩阵
 
-页面矩阵见：`research-workbook.png` 第二部分；网站已落实以下 11 个页面：
+关键词清单见：`02-keyword-list-corrected.png`（11 个词，按通用需求 / 个性需求分组）。  
+页面矩阵见：`02-page-matrix-corrected.png`（每页关键词、用户问题、URL、页面类型和优先级）。
+
+网站已落实以下 11 个页面：
 
 1. how to fish game → `/`
 2. how to fish beginner guide → `/guides/beginner-guide`
@@ -44,7 +47,7 @@
 
 ## 关卡 3：页面素材来源记录
 
-来源矩阵见：`research-workbook.png` 第三部分。每个网站页面底部也列出了直接引用的来源 URL。
+逐页来源记录见：`03-page-sources-corrected.png`。按关卡 2 的 11 个规划页面逐页记录，每页包含 2 个来源及其可支持的内容。每个网站页面底部也列出了直接引用的来源 URL。
 
 主要来源：
 
@@ -90,9 +93,15 @@
 
 ## 关卡 6：数据复盘和补页计划
 
-首次上线复盘见：`06-data-review.png`。
+首次上线复盘见：`06-data-review-corrected.png`。
 
 当前可确认生产部署、GSC 验证、sitemap 读取和 GA4 实时采集链路均已打通。网站上线时间不足 1 天，GSC 尚未形成可用于判断自然搜索表现的曝光、点击、平均排名和查询词样本，因此不据首小时访问量判断 SEO 成败。
+
+- 我的站：`https://how-to-fish-guide-mu.vercel.app/`
+- GSC 总展示：当前报告可用值 0
+- GSC 总点击：当前报告可用值 0
+- 当前判断：只做技术排查，暂不判断换词或升级
+- 下次复盘：上线第 7 天（2026-09-01）与第 14 天（2026-09-08）
 
 首轮候选补页计划：
 

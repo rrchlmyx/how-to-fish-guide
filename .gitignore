@@ -27,6 +27,7 @@
 /coursework/*.b64
 /coursework/*-chunks.txt
 /coursework/*-upload.png
+/public/coursework/
 
 # debug
 npm-debug.log*
