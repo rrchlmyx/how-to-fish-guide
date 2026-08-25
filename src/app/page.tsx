@@ -1,69 +1,133 @@
-import Image from "next/image";
+import Link from "next/link";
+import { GuideCard } from "@/components/guide-card";
+import { FishMark, PageFrame } from "@/components/site-shell";
+import { guides } from "@/lib/guides";
 
 export default function Home() {
+  const featured = guides.slice(0, 6);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <PageFrame>
+      <section className="hero">
+        <div className="hero-watermark" aria-hidden="true">
+          <span>LAT 57° 42&apos; N</span>
+          <span>DEPTH 124 M</span>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="shell hero-grid">
+          <div className="hero-copy">
+            <span className="eyebrow">Independent field guide · Updated daily</span>
+            <h1>
+              Catch smarter.
+              <br />
+              <em>Survive longer.</em>
+            </h1>
+            <p>
+              Straight-to-the-point guides for every island, lure, fish, weapon, and
+              boss in <strong>How to Fish</strong>.
+            </p>
+            <div className="hero-actions">
+              <Link className="button button-primary" href="/guides/beginner-guide">
+                Start the beginner route <span aria-hidden="true">→</span>
+              </Link>
+              <Link className="button button-ghost" href="/guides">
+                Browse all guides
+              </Link>
+            </div>
+            <div className="signal-row" aria-label="Guide status">
+              <span><i className="signal-dot" />10 focused guides</span>
+              <span>Source-linked</span>
+              <span>No invented codes</span>
+            </div>
+          </div>
+          <div className="sonar-card" aria-label="Progression sonar illustration">
+            <div className="sonar">
+              <div className="sonar-ring ring-one" />
+              <div className="sonar-ring ring-two" />
+              <div className="sonar-ring ring-three" />
+              <div className="sonar-line" />
+              <span className="ping ping-one" />
+              <span className="ping ping-two" />
+              <span className="ping ping-three" />
+              <FishMark />
+            </div>
+            <div className="sonar-meta">
+              <div>
+                <span>Current route</span>
+                <strong>Lighthouse → Volcano</strong>
+              </div>
+              <div>
+                <span>Core rule</span>
+                <strong>Keep boss trophies</strong>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="quick-strip">
+        <div className="shell quick-grid">
+          <div>
+            <span className="strip-number">01</span>
+            <p><strong>Talk first.</strong> NPC chains control progress.</p>
+          </div>
+          <div>
+            <span className="strip-number">02</span>
+            <p><strong>Match the lure.</strong> Each island has a tier.</p>
+          </div>
+          <div>
+            <span className="strip-number">03</span>
+            <p><strong>Inspect trophies.</strong> Do not sell the key item.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section shell">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow dark">Field notes</span>
+            <h2>Get unstuck fast</h2>
+          </div>
+          <Link href="/guides">View all 10 guides <span aria-hidden="true">→</span></Link>
+        </div>
+        <div className="guide-grid">
+          {featured.map((guide, index) => (
+            <GuideCard key={guide.slug} guide={guide} featured={index === 0} />
+          ))}
+        </div>
+      </section>
+
+      <section className="route-section">
+        <div className="shell route-grid">
+          <div>
+            <span className="eyebrow">The source-linked route</span>
+            <h2>Five stops. Follow each quest hand-in.</h2>
+            <p>
+              Follow the quest chain instead of sailing at random. Every route note links
+              back to the current sources used to verify it.
+            </p>
+            <Link className="button button-primary" href="/guides/islands-progression">
+              Open island walkthrough
+            </Link>
+          </div>
+          <ol className="route-map">
+            {[
+              ["Lighthouse", "Spider Crab"],
+              ["Forest", "Giant Piranha"],
+              ["Desert", "Pufferfish"],
+              ["Rocks", "Terrorizing Bird"],
+              ["Volcano", "Whale experiment"],
+            ].map(([place, objective], index) => (
+              <li key={place}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <div>
+                  <strong>{place}</strong>
+                  <small>{objective}</small>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+    </PageFrame>
   );
 }
