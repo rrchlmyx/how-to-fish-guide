@@ -1,5 +1,5 @@
 export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://runaways-roblox-guide.vercel.app"
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://runaways-guide.vercel.app"
 ).replace(/\/$/, "");
 
 export function absoluteUrl(path = "/") {
