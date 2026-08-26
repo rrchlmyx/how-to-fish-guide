@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "All How to Fish Guides",
   description:
     "Browse source-linked How to Fish guides covering beginner progression, islands, lures, fish, weapons, bosses, navigation, money, and achievements.",
+  alternates: { canonical: "/guides" },
 };
 
 export default function GuidesPage() {

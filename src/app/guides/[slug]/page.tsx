@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { JsonLd } from "@/components/json-ld";
 import { PageFrame } from "@/components/site-shell";
 import { getGuide, guides } from "@/lib/guides";
+import { absoluteUrl, siteUrl } from "@/lib/site";
 
 export function generateStaticParams() {
   return guides.map((guide) => ({ slug: guide.slug }));
@@ -23,7 +25,7 @@ export async function generateMetadata(
       title: guide.title,
       description: guide.description,
       type: "article",
-      modifiedTime: "2026-08-25T00:00:00.000Z",
+      modifiedTime: "2026-08-26T00:00:00.000Z",
     },
   };
 }
@@ -37,28 +39,52 @@ export default async function GuidePage(props: PageProps<"/guides/[slug]">) {
     .filter((item) => item.slug !== guide.slug && item.category === guide.category)
     .slice(0, 3);
 
+  const pageUrl = absoluteUrl(`/guides/${guide.slug}`);
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: guide.title,
-    description: guide.description,
-    dateModified: "2026-08-25",
-    author: {
-      "@type": "Organization",
-      name: "Hook & Haul Editorial",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Hook & Haul",
-    },
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: guide.title,
+        description: guide.description,
+        datePublished: "2026-08-25",
+        dateModified: "2026-08-26",
+        mainEntityOfPage: pageUrl,
+        url: pageUrl,
+        inLanguage: "en",
+        author: {
+          "@type": "Organization",
+          name: "Hook & Haul Editorial",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Hook & Haul",
+          url: siteUrl,
+          logo: {
+            "@type": "ImageObject",
+            url: `${siteUrl}/icon.svg`,
+          },
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Guides",
+            item: absoluteUrl("/guides"),
+          },
+          { "@type": "ListItem", position: 3, name: guide.title, item: pageUrl },
+        ],
+      },
+    ],
   };
 
   return (
     <PageFrame>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
+      <JsonLd data={articleSchema} />
       <section className="article-hero">
         <div className="shell article-hero-inner">
           <div>

@@ -4,6 +4,7 @@ import { InfoPage } from "@/components/info-page";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy policy for the Hook & Haul game guide.",
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {
