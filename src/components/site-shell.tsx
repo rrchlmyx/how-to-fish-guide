@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { steamStoreUrl } from "@/lib/site";
 
 const navItems = [
   { href: "/guides", label: "Guides" },
@@ -39,7 +40,7 @@ export function SiteHeader() {
         </nav>
         <a
           className="play-link"
-          href="https://store.steampowered.com/app/3658370/How_to_Fish/"
+          href={steamStoreUrl}
           target="_blank"
           rel="noreferrer"
         >

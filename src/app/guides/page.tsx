@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { GuideCard } from "@/components/guide-card";
+import { JsonLd } from "@/components/json-ld";
 import { PageFrame } from "@/components/site-shell";
 import { categories, guides } from "@/lib/guides";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "All How to Fish Guides",
@@ -11,8 +13,21 @@ export const metadata: Metadata = {
 };
 
 export default function GuidesPage() {
+  const indexSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "How to Fish game guides",
+    itemListElement: guides.map((guide, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: absoluteUrl(`/guides/${guide.slug}`),
+      name: guide.title,
+    })),
+  };
+
   return (
     <PageFrame>
+      <JsonLd data={indexSchema} />
       <section className="page-hero">
         <div className="shell">
           <span className="eyebrow">Field guide index</span>

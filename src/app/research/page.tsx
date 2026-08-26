@@ -68,9 +68,9 @@ const keywordRows = [
 ];
 
 const sourceRows = [
-  ["/", "Steam · store.steampowered.com/app/3658370", "Wiki · howtofishgame.wiki/guides/getting-started", "Release facts, premise, route entry points"],
+  ["/", "Steam · store.steampowered.com/app/4001890", "Wiki · howtofishgame.wiki/guides/getting-started", "Release facts, premise, route entry points"],
   ["/guides/beginner-guide", "Wiki · howtofishgame.wiki/guides/getting-started", "GrindNStrat · /how-to-fish-game-islands-guide/", "First-hour priorities, quest safety, early loop"],
-  ["/guides/controls", "GrindNStrat · /how-to-fish-game-islands-guide/", "Steam · store.steampowered.com/app/3658370", "Controls, fishing actions, combat context"],
+  ["/guides/controls", "GrindNStrat · /how-to-fish-game-islands-guide/", "Steam · store.steampowered.com/app/4001890", "Controls, fishing actions, combat context"],
   ["/guides/islands-progression", "AllThings.How · /full-island-and-boss-progression-walkthrough/", "AllThings.How · /how-to-unlock-every-island-forest-desert-rocks-volcano/", "Island order, hand-ins, boss gates"],
   ["/guides/lures-and-baits", "NerdsChalk · /how-to-fish-every-lure-bait-catch/", "TposeGaming · /how-to-fish-game-bait/", "Lure tiers, catch pools, boss bait"],
   ["/guides/fish-list", "Times of India · /list-of-all-fish-how-to-get-them/", "AllThings.How · /all-fish-species-by-island-and-how-to-catch-them/", "Species, islands, collection checks"],
@@ -78,7 +78,7 @@ const sourceRows = [
   ["/guides/money-guide", "NerdsChalk · /how-to-fish-every-lure-bait-catch/", "GrindNStrat · /how-to-fish-game-islands-guide/", "Catch values, cooking, repeatable farming loop"],
   ["/guides/bosses", "AllThings.How · /full-island-and-boss-progression-walkthrough/", "IndieBunny · /lure-guide-every-fish-boss-by-island-location", "Boss triggers, locations, trophies"],
   ["/guides/radar-and-navigation", "AllThings.How · /how-to-unlock-every-island-forest-desert-rocks-volcano/", "Wiki · howtofishgame.wiki/guides/getting-started", "Routes, markers, unlock context"],
-  ["/guides/achievements", "Steam Community · /stats/3658370/achievements", "Wiki · howtofishgame.wiki/guides/getting-started", "Achievement list, story order, cleanup"],
+  ["/guides/achievements", "Steam Community · /stats/4001890/achievements", "Wiki · howtofishgame.wiki/guides/getting-started", "Achievement list, story order, cleanup"],
 ];
 
 export default function ResearchPage() {
