@@ -75,7 +75,7 @@ export const guides: Guide[] = [
     sources: [
       {
         label: "Official Steam store page",
-        url: "https://store.steampowered.com/app/3658370/How_to_Fish/",
+        url: "https://store.steampowered.com/app/4001890/How_to_Fish/",
       },
       {
         label: "How to Fish Game Wiki — Getting Started",
@@ -133,7 +133,7 @@ export const guides: Guide[] = [
       },
       {
         label: "Official Steam store page",
-        url: "https://store.steampowered.com/app/3658370/How_to_Fish/",
+        url: "https://store.steampowered.com/app/4001890/How_to_Fish/",
       },
     ],
   },
@@ -561,7 +561,7 @@ export const guides: Guide[] = [
     sources: [
       {
         label: "Steam Community — global achievements",
-        url: "https://steamcommunity.com/stats/3658370/achievements",
+        url: "https://steamcommunity.com/stats/4001890/achievements",
       },
       {
         label: "How to Fish Game Wiki — achievement priorities",

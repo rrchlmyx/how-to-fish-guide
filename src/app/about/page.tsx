@@ -4,6 +4,7 @@ import { InfoPage } from "@/components/info-page";
 export const metadata: Metadata = {
   title: "About",
   description: "How Hook & Haul researches and maintains How to Fish game guides.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

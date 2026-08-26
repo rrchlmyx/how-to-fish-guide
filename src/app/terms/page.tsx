@@ -4,6 +4,7 @@ import { InfoPage } from "@/components/info-page";
 export const metadata: Metadata = {
   title: "Terms of Use",
   description: "Terms for using the Hook & Haul independent game guide.",
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {

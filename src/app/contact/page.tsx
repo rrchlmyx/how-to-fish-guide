@@ -4,6 +4,7 @@ import { InfoPage } from "@/components/info-page";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Report an outdated or inaccurate How to Fish guide.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

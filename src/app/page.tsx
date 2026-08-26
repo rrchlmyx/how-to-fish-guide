@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCard } from "@/components/guide-card";
+import { JsonLd } from "@/components/json-ld";
 import { FishMark, PageFrame } from "@/components/site-shell";
 import { guides } from "@/lib/guides";
+import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -11,8 +13,32 @@ export const metadata: Metadata = {
 export default function Home() {
   const featured = guides.slice(0, 6);
 
+  const siteSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        url: siteUrl,
+        name: "Hook & Haul",
+        description:
+          "Source-linked How to Fish game guides for islands, lures, fish, weapons, bosses, and progression.",
+        inLanguage: "en",
+        publisher: { "@id": `${siteUrl}/#organization` },
+      },
+      {
+        "@type": "Organization",
+        "@id": `${siteUrl}/#organization`,
+        name: "Hook & Haul",
+        url: siteUrl,
+        logo: `${siteUrl}/icon.svg`,
+      },
+    ],
+  };
+
   return (
     <PageFrame>
+      <JsonLd data={siteSchema} />
       <section className="hero">
         <div className="hero-watermark" aria-hidden="true">
           <span>LAT 57° 42&apos; N</span>
@@ -20,7 +46,7 @@ export default function Home() {
         </div>
         <div className="shell hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow">Independent field guide · Updated Aug 25, 2026</span>
+            <span className="eyebrow">Independent field guide · Updated Aug 26, 2026</span>
             <h1>
               Catch smarter.
               <br />

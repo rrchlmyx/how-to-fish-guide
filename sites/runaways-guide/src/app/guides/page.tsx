@@ -6,9 +6,9 @@ import { categories, guides } from "@/lib/guides";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "All How to Fish Guides",
+  title: "All RUNAWAYS Roblox Guides",
   description:
-    "Browse source-linked How to Fish guides covering beginner progression, islands, lures, fish, weapons, bosses, navigation, money, and achievements.",
+    "Browse RUNAWAYS guides for beginners, codes, classes, and the Mexico escape route.",
   alternates: { canonical: "/guides" },
 };
 
@@ -16,7 +16,7 @@ export default function GuidesPage() {
   const indexSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "How to Fish game guides",
+    name: "RUNAWAYS Roblox guides",
     itemListElement: guides.map((guide, index) => ({
       "@type": "ListItem",
       position: index + 1,
@@ -30,23 +30,17 @@ export default function GuidesPage() {
       <JsonLd data={indexSchema} />
       <section className="page-hero">
         <div className="shell">
-          <span className="eyebrow">Field guide index</span>
-          <h1>Every answer, sorted by the problem you are solving.</h1>
-          <p>
-            Ten focused pages built from current sources. No padded news, invented
-            values, or copy-pasted game text.
-          </p>
+          <span className="eyebrow">Index</span>
+          <h1>Every note, sorted by the problem.</h1>
+          <p>Codes, classes, and the southbound route. No invented prices.</p>
         </div>
       </section>
-      <section className="section shell guide-index">
+      <section className="section shell">
         {categories.map((category) => {
           const categoryGuides = guides.filter((guide) => guide.category === category);
           return (
-            <div className="category-section" key={category}>
-              <div className="category-heading">
-                <span>{categoryGuides.length.toString().padStart(2, "0")}</span>
-                <h2>{category}</h2>
-              </div>
+            <div key={category}>
+              <h2>{category}</h2>
               <div className="guide-grid">
                 {categoryGuides.map((guide) => (
                   <GuideCard key={guide.slug} guide={guide} />
@@ -59,4 +53,3 @@ export default function GuidesPage() {
     </PageFrame>
   );
 }
-
