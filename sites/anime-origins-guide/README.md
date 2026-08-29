@@ -18,12 +18,11 @@ npm run dev
 
 Open http://127.0.0.1:3002
 
-## Vercel
+## Production
 
-- New project from the same GitHub repo
-- Root Directory: `sites/anime-origins-guide`
-- Framework: Next.js
-- Optional env: `NEXT_PUBLIC_SITE_URL=https://<your-host>`
+- Live: https://anime-origins-guide-ten.vercel.app
+- Vercel project Root Directory: `sites/anime-origins-guide`
+- Optional env: `NEXT_PUBLIC_SITE_URL=https://anime-origins-guide-ten.vercel.app`
 
 ## Editorial rule
 

@@ -1,5 +1,5 @@
 export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://anime-origins-guide.vercel.app"
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://anime-origins-guide-ten.vercel.app"
 ).replace(/\/$/, "");
 
 export function absoluteUrl(path = "/") {
