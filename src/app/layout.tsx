@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo, IBM_Plex_Mono } from "next/font/google";
-import { Analytics } from "@/components/analytics";
+import { SiteMetrics } from "@/components/analytics";
 import { siteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -64,7 +64,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={`${archivo.variable} ${plexMono.variable}`}>
       <body>
         {children}
-        <Analytics />
+        <SiteMetrics />
       </body>
     </html>
   );

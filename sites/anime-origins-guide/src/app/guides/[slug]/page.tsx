@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { CodeTable } from "@/components/code-table";
 import { JsonLd } from "@/components/json-ld";
 import { PageFrame } from "@/components/site-shell";
 import { getGuide, guides } from "@/lib/guides";
@@ -20,6 +21,12 @@ export async function generateMetadata(
     title: guide.title,
     description: guide.description,
     alternates: { canonical: `/guides/${guide.slug}` },
+    openGraph: {
+      title: guide.title,
+      description: guide.description,
+      type: "article",
+      modifiedTime: "2026-08-30T00:00:00.000Z",
+    },
   };
 }
 
@@ -31,15 +38,44 @@ export default async function GuidePage(props: PageProps<"/guides/[slug]">) {
   const pageUrl = absoluteUrl(`/guides/${guide.slug}`);
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: guide.title,
-    description: guide.description,
-    datePublished: "2026-08-28",
-    dateModified: "2026-08-28",
-    mainEntityOfPage: pageUrl,
-    url: pageUrl,
-    author: { "@type": "Organization", name: brandName },
-    publisher: { "@type": "Organization", name: brandName, url: siteUrl },
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: guide.title,
+        description: guide.description,
+        datePublished: "2026-08-28",
+        dateModified: "2026-08-30",
+        mainEntityOfPage: pageUrl,
+        url: pageUrl,
+        author: { "@type": "Organization", name: brandName },
+        publisher: { "@type": "Organization", name: brandName, url: siteUrl },
+      },
+      ...(guide.codes
+        ? [
+            {
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "What are the latest Anime Origins codes?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: guide.quickAnswer,
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "How do I redeem Anime Origins codes?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Reach Level 10, tap the orange Codes button on the right HUD, paste the code exactly including punctuation, and confirm.",
+                  },
+                },
+              ],
+            },
+          ]
+        : []),
+    ],
   };
 
   return (
@@ -62,6 +98,7 @@ export default async function GuidePage(props: PageProps<"/guides/[slug]">) {
           <span>Quick answer</span>
           <p>{guide.quickAnswer}</p>
         </aside>
+        {guide.codes ? <CodeTable rows={guide.codes} /> : null}
         {guide.sections.map((section) => (
           <section key={section.heading}>
             <h2>{section.heading}</h2>

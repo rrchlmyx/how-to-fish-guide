@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Newsreader } from "next/font/google";
+import { SiteMetrics } from "@/components/analytics";
 import { brandName, siteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -41,12 +42,28 @@ export const metadata: Metadata = {
     "Anime Origins traits",
     "how to redeem Anime Origins codes",
   ],
+  openGraph: {
+    title: `${brandName} — Anime Origins Roblox Guides`,
+    description:
+      "Source-linked Anime Origins Roblox guides for codes, Story Mode, summons, and traits.",
+    type: "website",
+    siteName: brandName,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${brandName} — Anime Origins Roblox Guides`,
+    description:
+      "Source-linked Anime Origins Roblox guides for codes, Story Mode, summons, and traits.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${newsreader.variable} ${plexMono.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <SiteMetrics />
+      </body>
     </html>
   );
 }

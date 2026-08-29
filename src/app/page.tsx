@@ -46,7 +46,7 @@ export default function Home() {
         </div>
         <div className="shell hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow">Independent field guide · Updated Aug 26, 2026</span>
+            <span className="eyebrow">Independent field guide · Updated Aug 30, 2026</span>
             <h1>
               Catch smarter.
               <br />

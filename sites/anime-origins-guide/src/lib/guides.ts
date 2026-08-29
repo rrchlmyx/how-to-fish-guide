@@ -5,6 +5,12 @@ export type GuideSection = {
   note?: string;
 };
 
+export type CodeRow = {
+  code: string;
+  reward: string;
+  note?: string;
+};
+
 export type Guide = {
   slug: string;
   title: string;
@@ -15,6 +21,7 @@ export type Guide = {
   quickAnswer: string;
   sections: GuideSection[];
   sources: { label: string; url: string }[];
+  codes?: CodeRow[];
 };
 
 export const guides: Guide[] = [
@@ -82,23 +89,58 @@ export const guides: Guide[] = [
     description:
       "Working Anime Origins Roblox codes, listed rewards, and conflict notes when outlets disagree.",
     category: "Start Here",
-    updated: "August 28, 2026",
+    updated: "August 30, 2026",
     readTime: "4 min",
     quickAnswer:
-      "As of late August 2026, major trackers still list 100K!, HappyPatch!, ChallengesFixed, GAMESPEED, TYKaito!, THANKYOU!, Origins, AO, and Release!. Redeem on the orange Codes button after Level 10. Codes expire without notice.",
+      "Rechecked 30 August 2026: GameRant still lists 100K!, HappyPatch!, ChallengesFixed, GAMESPEED, TYKaito!, THANKYOU!, Origins, AO, and Release! as active, with no expired table. Redeem on the orange Codes button after Level 10. Copy punctuation exactly.",
+    codes: [
+      {
+        code: "100K!",
+        reward: "25 Trait Rerolls, 10 Perfect Stat Prisms, 10 Stat Prisms, 1,000 Gems",
+        note: "GameRant (18 Aug) Discord 100k milestone code.",
+      },
+      {
+        code: "HappyPatch!",
+        reward: "Trait Rerolls + Prisms + Gems (pile disputed)",
+        note: "GameRant: 10 / 5 / 5 / 850 Gems. Khelnow and Beebom list a larger pile. Trust the popup.",
+      },
+      {
+        code: "ChallengesFixed",
+        reward: "10 Trait Rerolls, 750 Gems, Remnant mix",
+        note: "Remnant counts are disputed across trackers.",
+      },
+      {
+        code: "GAMESPEED",
+        reward: "Gems + Trait Rerolls + Stat Prisms (wording disputed)",
+        note: "GameRant includes 750 Gems; some tables omit Gems.",
+      },
+      {
+        code: "TYKaito!",
+        reward: "1,000 Gems, 25 Trait Rerolls, 5 Stat Prisms",
+      },
+      {
+        code: "THANKYOU!",
+        reward: "10 Trait Rerolls, 10 Perfect Stat Prisms",
+        note: "Some lists also add Gems; GameRant does not.",
+      },
+      {
+        code: "Origins",
+        reward: "20 Stat Prisms, 10 Perfect Stat Prisms",
+      },
+      {
+        code: "AO",
+        reward: "25 Trait Rerolls",
+      },
+      {
+        code: "Release!",
+        reward: "1,750 Gems",
+      },
+    ],
     sections: [
       {
-        heading: "Codes reported active (late August 2026)",
-        bullets: [
-          "100K! — GameRant lists 25 Trait Rerolls, 10 Perfect Stat Prisms, 10 Stat Prisms, and 1,000 Gems (Discord 100k milestone code).",
-          "HappyPatch! — Trackers disagree on exact piles. GameRant: 10 Trait Rerolls, 5 Perfect Stat Prisms, 5 Stat Prisms, 850 Gems. Khelnow lists a larger HappyPatch! pile. Trust the in-game popup.",
-          "ChallengesFixed — GameRant: 10 Trait Rerolls, 750 Gems, plus Remnant mix (Azure / Violet / Radiant / Prismatic). Remnant counts are disputed across trackers.",
-          "GAMESPEED — Common listing: Gems + Trait Rerolls + Stat Prisms. Exact Gem count differs (750 vs other wording).",
-          "TYKaito! — Keep the capital letters and !. Common listing: 1,000 Gems, 25 Trait Rerolls, 5 Stat Prisms.",
-          "THANKYOU! — Trait Rerolls + Perfect Stat Prisms. Some lists also add Gems; others do not.",
-          "Origins — Stat Prisms + Perfect Stat Prisms (no Gems in most tables).",
-          "AO — Trait Rerolls only in most tables.",
-          "Release! — Largest single Gem dump in most tables (1,750 Gems).",
+        heading: "Still listed as active (30 August 2026)",
+        paragraphs: [
+          "GameRant, Pocket Tactics, Khelnow, and Beebom still show the same nine strings and an empty expired list. We did not flatten HappyPatch! or GAMESPEED into one invented pile.",
         ],
         note: "We do not invent a single flattened reward table when sources conflict. Copy-paste exactly, including punctuation, then believe the reward popup.",
       },
@@ -116,8 +158,8 @@ export const guides: Guide[] = [
         url: "https://gamerant.com/anime-origins-codes-discord-server-roblox/",
       },
       {
-        label: "anime-origins.online codes check (20 Aug 2026)",
-        url: "https://www.anime-origins.online/codes/",
+        label: "Pocket Tactics codes (20 Aug 2026)",
+        url: "https://www.pockettactics.com/anime-origins-codes",
       },
       {
         label: "Khelnow August codes roundup",
@@ -135,7 +177,7 @@ export const guides: Guide[] = [
     description:
       "Click-by-click Anime Origins code redemption: Level 10 gate, orange Codes button, punctuation traps, and failure checks.",
     category: "Start Here",
-    updated: "August 28, 2026",
+    updated: "August 30, 2026",
     readTime: "3 min",
     quickAnswer:
       "Reach Level 10 in Story, tap the orange Codes button on the right side of the HUD, paste the code exactly (keep ! and capitals), and confirm. There is no website or Discord redeem for the same rewards.",

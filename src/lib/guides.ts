@@ -138,6 +138,66 @@ export const guides: Guide[] = [
     ],
   },
   {
+    slug: "co-op-multiplayer",
+    title: "How to Fish Co-Op and Multiplayer",
+    description:
+      "How to host or join a How to Fish session with friends, what the Steam page still says about player count, and why some reports list eight-player lobbies.",
+    category: "Start Here",
+    updated: "August 30, 2026",
+    readTime: "5 min",
+    quickAnswer:
+      "How to Fish is online co-op on Steam. The official store page still describes it as a 1–4 player game. Independent reporting says patch 1.0.4 raised lobby size to eight and later added private invite-only sessions. Invite through Steam Overlay or Join Game, and trust the number shown in your current lobby UI.",
+    sections: [
+      {
+        heading: "What is official versus reported",
+        paragraphs: [
+          "The Steam store page, checked 30 August 2026, still calls How to Fish a 1–4 player physics-based fishing simulator. That is the public product description Google sees on the official listing.",
+          "Player.one’s launch recap (checked the same day) says Dazed Games shipped patch 1.0.4 to expand lobbies to eight players and later added private invite-only sessions. Those patch notes are not reproduced on the store page, so this guide does not flatten the two claims into one number.",
+        ],
+        bullets: [
+          "Steam store: 1–4 players.",
+          "Patch reporting: up to 8 after 1.0.4.",
+          "Later reporting: private / invite-only sessions exist.",
+          "Final authority: the lobby cap in your installed build.",
+        ],
+      },
+      {
+        heading: "How to play with friends",
+        paragraphs: [
+          "Everyone needs the same Steam build. Update before you host. From the main menu, open the multiplayer / session flow in your current version, create a lobby, then invite from Steam rather than sharing an unverified third-party link.",
+        ],
+        bullets: [
+          "Launch How to Fish through Steam and confirm the update finished.",
+          "Host a session from the in-game multiplayer menu.",
+          "Open Steam Overlay (Shift + Tab) and invite friends, or have them use Join Game on your Steam profile.",
+          "If you only want your group, pick the private / friends option when the current build shows one.",
+          "Start only after the lobby shows the people you expect.",
+        ],
+      },
+      {
+        heading: "What this page will not invent",
+        paragraphs: [
+          "There is no console edition on the Steam page, so this guide does not claim crossplay. Connection-failed writeups exist, but they disagree on file deletes and network tweaks; those steps are omitted until they can be checked in-game.",
+          "Co-op does not change the island hand-in rule. Unique boss trophies still have to reach the correct NPC. Playing with friends makes it easier to lose a required drop in someone else’s inventory.",
+        ],
+      },
+    ],
+    sources: [
+      {
+        label: "Official Steam store page",
+        url: "https://store.steampowered.com/app/4001890/How_to_Fish/",
+      },
+      {
+        label: "Player.one — launch recap and patch 1.0.4 lobby note",
+        url: "https://www.player.one/how-fish-steams-newest-viral-hit-why-are-chaotic-co-op-games-taking-over-163910",
+      },
+      {
+        label: "How to Fish Game Wiki — Getting Started",
+        url: "https://howtofishgame.wiki/guides/getting-started",
+      },
+    ],
+  },
+  {
     slug: "islands-progression",
     title: "All Islands and Progression Order",
     description:

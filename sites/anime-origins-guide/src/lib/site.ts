@@ -17,4 +17,6 @@ export const staticIndexablePaths = [
   "/guides",
   "/about",
   "/contact",
+  "/privacy",
+  "/terms",
 ] as const;

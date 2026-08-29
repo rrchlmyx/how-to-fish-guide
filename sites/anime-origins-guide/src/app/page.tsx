@@ -36,7 +36,7 @@ export default function Home() {
       <JsonLd data={siteSchema} />
       <section className="hero">
         <div className="shell">
-          <span className="eyebrow">Independent notes · 28 Aug 2026</span>
+          <span className="eyebrow">Independent notes · 30 Aug 2026</span>
           <h1>
             Level 10.
             <br />

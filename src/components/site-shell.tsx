@@ -72,6 +72,7 @@ export function SiteFooter() {
           <h2>Explore</h2>
           <Link href="/guides">All guides</Link>
           <Link href="/guides/beginner-guide">Beginner route</Link>
+          <Link href="/guides/co-op-multiplayer">Co-op</Link>
           <Link href="/guides/fish-list">Collection</Link>
         </div>
         <div>
