@@ -63,6 +63,8 @@ export function SiteFooter() {
           <h2>Site</h2>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
+          <Link href="/privacy">Privacy</Link>
+          <Link href="/terms">Terms</Link>
           <Link href="/guides">All guides</Link>
         </div>
       </div>

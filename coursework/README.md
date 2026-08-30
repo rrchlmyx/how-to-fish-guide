@@ -95,19 +95,22 @@
 
 首次上线复盘见：`06-data-review-corrected.png`。
 
-当前可确认生产部署、GSC 验证、sitemap 读取和 GA4 实时采集链路均已打通。网站上线时间不足 1 天，GSC 尚未形成可用于判断自然搜索表现的曝光、点击、平均排名和查询词样本，因此不据首小时访问量判断 SEO 成败。
+2026-08-30 复核：
 
-- 我的站：`https://how-to-fish-guide-mu.vercel.app/`
-- GSC 总展示：当前报告可用值 0
-- GSC 总点击：当前报告可用值 0
-- 当前判断：只做技术排查，暂不判断换词或升级
-- 下次复盘：上线第 7 天（2026-09-01）与第 14 天（2026-09-08）
+- How to Fish：`https://how-to-fish-guide-mu.vercel.app/`
+- RUNAWAYS：`https://runaways-guide.vercel.app/`
+- Anime Origins：`https://anime-origins-guide-ten.vercel.app/`
+- GSC：How to Fish 与 RUNAWAYS 已于 2026-08-26 开始收集展示（Google 邮件，2026-08-28）。Anime Origins 于 2026-08-29 收到验证欢迎邮件。
+- 公开 `site:` 检索：2026-08-30 仍无索引结果，因此不做排名或换词判断。
+- 下次正式复盘：上线第 7 天（2026-09-01）与第 14 天（2026-09-08）
 
-首轮候选补页计划：
+补页：
 
-1. Co-op / multiplayer：官方与实机来源核验完成，且 GSC 出现相关查询后优先发布。
-2. Quest items / trophies：按当前游戏内任务文本核验数量与交付对象后发布，避免复制冲突数值。
+1. Co-op / multiplayer：已于 2026-08-30 发布。Steam 商店仍写 1–4 人；独立报道称 1.0.4 补丁后大厅为 8 人。页面保留冲突，以当前大厅人数为准。
+2. Quest items / trophies：已于 2026-08-30 发布。保留 fin/tail 与鸟类昵称冲突；以游戏内任务文字与 inspect 结果为准。
 3. Fish prices / cooking：完成实测价格表，或 GSC 出现 price/cooking 查询后从现有页面拆分。
+
+运维备注（2026-08-30 下午）：含上述改动的 PR 尚未合并到 `main`，生产域名上的 `/guides/co-op-multiplayer`、两站 privacy/terms、GA4 仍未上线。合并后才能在 GSC 请求编入索引。
 
 本关收获文案：
 

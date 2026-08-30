@@ -138,6 +138,134 @@ export const guides: Guide[] = [
     ],
   },
   {
+    slug: "co-op-multiplayer",
+    title: "How to Fish Co-Op and Multiplayer",
+    description:
+      "How to host or join a How to Fish session with friends, what the Steam page still says about player count, and why some reports list eight-player lobbies.",
+    category: "Start Here",
+    updated: "August 30, 2026",
+    readTime: "5 min",
+    quickAnswer:
+      "How to Fish is online co-op on Steam. The official store page still describes it as a 1–4 player game. Independent reporting says patch 1.0.4 raised lobby size to eight and later added private invite-only sessions. Invite through Steam Overlay or Join Game, and trust the number shown in your current lobby UI.",
+    sections: [
+      {
+        heading: "What is official versus reported",
+        paragraphs: [
+          "The Steam store page, checked 30 August 2026, still calls How to Fish a 1–4 player physics-based fishing simulator. That is the public product description Google sees on the official listing.",
+          "Player.one’s launch recap (checked the same day) says Dazed Games shipped patch 1.0.4 to expand lobbies to eight players and later added private invite-only sessions. Those patch notes are not reproduced on the store page, so this guide does not flatten the two claims into one number.",
+        ],
+        bullets: [
+          "Steam store: 1–4 players.",
+          "Patch reporting: up to 8 after 1.0.4.",
+          "Later reporting: private / invite-only sessions exist.",
+          "Final authority: the lobby cap in your installed build.",
+        ],
+      },
+      {
+        heading: "How to play with friends",
+        paragraphs: [
+          "Everyone needs the same Steam build. Update before you host. From the main menu, open the multiplayer / session flow in your current version, create a lobby, then invite from Steam rather than sharing an unverified third-party link.",
+        ],
+        bullets: [
+          "Launch How to Fish through Steam and confirm the update finished.",
+          "Host a session from the in-game multiplayer menu.",
+          "Open Steam Overlay (Shift + Tab) and invite friends, or have them use Join Game on your Steam profile.",
+          "If you only want your group, pick the private / friends option when the current build shows one.",
+          "Start only after the lobby shows the people you expect.",
+        ],
+      },
+      {
+        heading: "What this page will not invent",
+        paragraphs: [
+          "There is no console edition on the Steam page, so this guide does not claim crossplay. Connection-failed writeups exist, but they disagree on file deletes and network tweaks; those steps are omitted until they can be checked in-game.",
+          "Co-op does not change the island hand-in rule. Unique boss trophies still have to reach the correct NPC. Playing with friends makes it easier to lose a required drop in someone else’s inventory.",
+        ],
+      },
+    ],
+    sources: [
+      {
+        label: "Official Steam store page",
+        url: "https://store.steampowered.com/app/4001890/How_to_Fish/",
+      },
+      {
+        label: "Player.one — launch recap and patch 1.0.4 lobby note",
+        url: "https://www.player.one/how-fish-steams-newest-viral-hit-why-are-chaotic-co-op-games-taking-over-163910",
+      },
+      {
+        label: "How to Fish Game Wiki — Getting Started",
+        url: "https://howtofishgame.wiki/guides/getting-started",
+      },
+    ],
+  },
+  {
+    slug: "quest-items-trophies",
+    title: "How to Fish Quest Items and Boss Trophies",
+    description:
+      "Which boss drops unlock the next island, what not to sell or cook, and where community guides disagree on trophy names.",
+    category: "Progression",
+    updated: "August 30, 2026",
+    readTime: "7 min",
+    quickAnswer:
+      "A boss kill alone does not unlock the next island. Keep the distinctive trophy—meat, skeleton, fin/tail, head, or whole whale body—and hand it to the quest NPC. If the Radar does not change, inspect what you are carrying before farming more cash. Live quest text wins when guides disagree on names.",
+    sections: [
+      {
+        heading: "The hand-in rule",
+        paragraphs: [
+          "Current walkthroughs agree on the loop: finish the local NPC request, use the named bait, defeat the boss, keep the unusual drop, then return it. Selling, cooking, eating, or gambling the trophy is the most common reason the map does not move.",
+          "In co-op, assign one trophy carrier before the cast. A friend can hold the drop while you fight, but the quest only advances when the correct NPC receives it.",
+        ],
+        bullets: [
+          "Trigger: NPC request + special bait or lure.",
+          "Fight: defeat the intended story boss.",
+          "Proof: distinctive drop stays in inventory.",
+          "Advance: hand-in updates Radar coordinates or quest state.",
+        ],
+      },
+      {
+        heading: "Story trophies by route (reported)",
+        bullets: [
+          "Lighthouse / Spider Crab: Empty Beer Can bait. Hand Spider Crab meat to the Lighthouse Keeper for boat access / Forest route (AllThings.How).",
+          "Forest / Giant Piranha: Modified Leech after the leech request. Hand the Giant Piranha skeleton to the lake NPC for Desert coordinates.",
+          "Desert / Pufferfish: Carrot from the tourist chain. Guides disagree on the drop name—fin versus tail. Inspect the item and follow the live quest wording.",
+          "Rocks / Albatross (also called Terrorizing Bird): Professional Boss Lure → Tuna → bird fight. Hand the bird head to the Rocks shop NPC for Volcano coordinates.",
+          "Volcano / Whale route: Fish Bucket for Bowhead Whale, then throw that whale body into the volcano to start Mutated Bowhead Whale. Finish the military / scientist sequence for the final mainland route.",
+        ],
+      },
+      {
+        heading: "Optional boss-lure trophies versus story trophies",
+        paragraphs: [
+          "Purchasable Beginner / Standard / Professional / Scientific Boss Lures open side bosses such as Old Pike, Blue Shark, Tuna, and Goblin Shark. Those fights are useful for money and collection, but they do not replace the story hand-ins above.",
+          "If a boss never appears, the blocker is usually the NPC step or bait, not weapon damage. If it dies and the map stays put, the trophy never reached the quest giver.",
+        ],
+      },
+      {
+        heading: "What this page will not invent",
+        paragraphs: [
+          "Community guides conflict on a few trophy nicknames and on exact leech counts. This page does not publish a fake permanent item ID table. After Patch 1.0.5, sailing to locked islands is blocked, so old “sail straight to Volcano” advice is obsolete.",
+          "Use inspect (F) on every unusual drop. If two sources disagree, keep the item until the NPC reacts or the quest text tells you otherwise.",
+        ],
+      },
+    ],
+    sources: [
+      {
+        label: "AllThings.How — full island and boss progression",
+        url: "https://allthings.how/how-to-fish-full-island-and-boss-progression-walkthrough/",
+      },
+      {
+        label: "AllThings.How — defeat all bosses / hand-ins",
+        url: "https://allthings.how/how-to-fish-how-to-defeat-all-bosses/",
+      },
+      {
+        label: "AllThings.How — unlock every island",
+        url: "https://allthings.how/how-to-fish-how-to-unlock-every-island-forest-desert-rocks-volcano/",
+      },
+      {
+        label: "9Puz — five-island route and trophy rule (checked Aug 26, 2026)",
+        url: "https://9puz.com/5262-how-to-fish-progression-walkthrough/",
+      },
+    ],
+  },
+  {
     slug: "islands-progression",
     title: "All Islands and Progression Order",
     description:

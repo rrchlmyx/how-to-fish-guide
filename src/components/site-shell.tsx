@@ -3,6 +3,7 @@ import { steamStoreUrl } from "@/lib/site";
 
 const navItems = [
   { href: "/guides", label: "Guides" },
+  { href: "/guides/co-op-multiplayer", label: "Co-op" },
   { href: "/guides/islands-progression", label: "Islands" },
   { href: "/guides/lures-and-baits", label: "Lures" },
   { href: "/guides/fish-list", label: "Fish List" },
@@ -72,6 +73,8 @@ export function SiteFooter() {
           <h2>Explore</h2>
           <Link href="/guides">All guides</Link>
           <Link href="/guides/beginner-guide">Beginner route</Link>
+          <Link href="/guides/co-op-multiplayer">Co-op</Link>
+          <Link href="/guides/quest-items-trophies">Quest trophies</Link>
           <Link href="/guides/fish-list">Collection</Link>
         </div>
         <div>

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ClassTable } from "@/components/class-table";
+import { CodeTable } from "@/components/code-table";
 import { JsonLd } from "@/components/json-ld";
 import { PageFrame } from "@/components/site-shell";
 import { getGuide, guides } from "@/lib/guides";
@@ -20,6 +22,12 @@ export async function generateMetadata(
     title: guide.title,
     description: guide.description,
     alternates: { canonical: `/guides/${guide.slug}` },
+    openGraph: {
+      title: guide.title,
+      description: guide.description,
+      type: "article",
+      modifiedTime: "2026-08-30T00:00:00.000Z",
+    },
   };
 }
 
@@ -31,15 +39,44 @@ export default async function GuidePage(props: PageProps<"/guides/[slug]">) {
   const pageUrl = absoluteUrl(`/guides/${guide.slug}`);
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: guide.title,
-    description: guide.description,
-    datePublished: "2026-08-26",
-    dateModified: "2026-08-26",
-    mainEntityOfPage: pageUrl,
-    url: pageUrl,
-    author: { "@type": "Organization", name: "State Line" },
-    publisher: { "@type": "Organization", name: "State Line", url: siteUrl },
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: guide.title,
+        description: guide.description,
+        datePublished: "2026-08-26",
+        dateModified: "2026-08-30",
+        mainEntityOfPage: pageUrl,
+        url: pageUrl,
+        author: { "@type": "Organization", name: "State Line" },
+        publisher: { "@type": "Organization", name: "State Line", url: siteUrl },
+      },
+      ...(guide.codes
+        ? [
+            {
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "What are the working RUNAWAYS codes right now?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: guide.quickAnswer,
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "How do I redeem RUNAWAYS codes?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Open Shop on the left, scroll to Codes at the bottom, paste the code exactly, and press Use.",
+                  },
+                },
+              ],
+            },
+          ]
+        : []),
+    ],
   };
 
   return (
@@ -60,6 +97,8 @@ export default async function GuidePage(props: PageProps<"/guides/[slug]">) {
           <span>Quick answer</span>
           <p>{guide.quickAnswer}</p>
         </aside>
+        {guide.codes ? <CodeTable rows={guide.codes} /> : null}
+        {guide.classes ? <ClassTable rows={guide.classes} /> : null}
         {guide.sections.map((section) => (
           <section key={section.heading}>
             <h2>{section.heading}</h2>
@@ -87,6 +126,18 @@ export default async function GuidePage(props: PageProps<"/guides/[slug]">) {
               </li>
             ))}
           </ol>
+        </section>
+        <section>
+          <h2>Keep running</h2>
+          <ul>
+            {guides
+              .filter((item) => item.slug !== guide.slug)
+              .map((item) => (
+                <li key={item.slug}>
+                  <Link href={`/guides/${item.slug}`}>{item.title}</Link>
+                </li>
+              ))}
+          </ul>
         </section>
       </article>
     </PageFrame>

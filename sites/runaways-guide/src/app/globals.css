@@ -147,6 +147,48 @@ a { color: inherit; text-decoration: none; }
 }
 .sources a { color: var(--amber); }
 
+.table-wrap {
+  overflow-x: auto;
+  margin: 28px 0;
+  border: 1px solid var(--line);
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.data-table th,
+.data-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+}
+.data-table th {
+  color: var(--paper);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.data-table td { color: var(--muted); }
+.data-table code {
+  color: var(--paper);
+  font-size: 14px;
+}
+.table-note {
+  display: block;
+  margin-top: 4px;
+  color: #a89880;
+}
+.copy-code {
+  background: transparent;
+  color: var(--amber);
+  border: 1px solid var(--amber);
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 40px 0 24px;

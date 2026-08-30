@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Newsreader } from "next/font/google";
+import { SiteMetrics } from "@/components/analytics";
 import { siteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -40,12 +41,28 @@ export const metadata: Metadata = {
     "RUNAWAYS classes",
     "how to reach Mexico RUNAWAYS",
   ],
+  openGraph: {
+    title: "State Line — RUNAWAYS Roblox Guides",
+    description:
+      "Source-linked RUNAWAYS Roblox guides for codes, classes, and the Mexico route.",
+    type: "website",
+    siteName: "State Line",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "State Line — RUNAWAYS Roblox Guides",
+    description:
+      "Source-linked RUNAWAYS Roblox guides for codes, classes, and the Mexico route.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${newsreader.variable} ${plexMono.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <SiteMetrics />
+      </body>
     </html>
   );
 }

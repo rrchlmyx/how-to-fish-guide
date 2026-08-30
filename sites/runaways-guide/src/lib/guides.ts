@@ -5,6 +5,19 @@ export type GuideSection = {
   note?: string;
 };
 
+export type CodeRow = {
+  code: string;
+  reward: string;
+  note?: string;
+};
+
+export type ClassRow = {
+  name: string;
+  cost: string;
+  loadout: string;
+  bonus: string;
+};
+
 export type Guide = {
   slug: string;
   title: string;
@@ -15,6 +28,8 @@ export type Guide = {
   quickAnswer: string;
   sections: GuideSection[];
   sources: { label: string; url: string }[];
+  codes?: CodeRow[];
+  classes?: ClassRow[];
 };
 
 export const guides: Guide[] = [
@@ -89,18 +104,29 @@ export const guides: Guide[] = [
     description:
       "Working RUNAWAYS Roblox codes, what they grant, and how to redeem them in the Shop menu.",
     category: "Start Here",
-    updated: "August 26, 2026",
+    updated: "August 30, 2026",
     readTime: "3 min",
     quickAnswer:
-      "As of 26 August 2026, major outlets still list SUPERCAT for a Light Pistol and RUN for 1,000 Credz. Redeem in Shop → Codes. Codes expire without notice.",
+      "Rechecked again 30 August 2026 (UTC afternoon): SUPERCAT and RUN still listed; no new codes and no expired table. GameRant / AllThings.How say RUN is 1,000 Credz; Beebom / PCGamesN say 2k. Redeem in Shop → Codes. Trust the in-game grant.",
+    codes: [
+      {
+        code: "SUPERCAT",
+        reward: "Light Pistol",
+        note: "Listed by GameRant, GamesRadar, Beebom, AllThings.How.",
+      },
+      {
+        code: "RUN",
+        reward: "Credz (amount disputed)",
+        note: "1,000 Credz in GameRant / AllThings.How; 2k in Beebom / PCGamesN.",
+      },
+    ],
     sections: [
       {
-        heading: "Codes reported active on 26 August 2026",
-        bullets: [
-          "SUPERCAT — Light Pistol (listed by GameRant, GamesRadar, LDPlayer, Beebom).",
-          "RUN — 1,000 Credz (GameRant, GamesRadar, LDPlayer). Beebom listed this as 2k cash; treat the in-game grant as the authority.",
+        heading: "Codes still listed on 30 August 2026",
+        paragraphs: [
+          "Afternoon recheck against GameRant, Beebom, PCGamesN, and ValoSettings: still only SUPERCAT and RUN, still no expired list. That is not a promise they will work tonight.",
         ],
-        note: "Promo codes change quickly. If a code fails, it is probably expired, not a site error.",
+        note: "Promo codes change quickly. If a code fails, it is probably expired, already claimed, or typed with the wrong case — not a site error.",
       },
       {
         heading: "How to redeem",
@@ -120,8 +146,12 @@ export const guides: Guide[] = [
         url: "https://www.gamesradar.com/games/action/runaways-codes/",
       },
       {
-        label: "LDPlayer beginner guide",
-        url: "https://www.ldplayer.net/blog/roblox-runaways-beginners-guide.html",
+        label: "Beebom codes (24 Aug 2026)",
+        url: "https://beebom.com/roblox-runaways-codes/",
+      },
+      {
+        label: "AllThings.How class unlock guide (codes recap)",
+        url: "https://allthings.how/how-to-unlock-every-runaways-class-full-list-and-costs/",
       },
     ],
   },
@@ -129,37 +159,54 @@ export const guides: Guide[] = [
     slug: "classes",
     title: "RUNAWAYS Classes: What to Buy First",
     description:
-      "Which RUNAWAYS class to unlock first, and why published price tables currently disagree.",
+      "Every RUNAWAYS class cost, loadout, and bonus from the latest AllThings.How table, plus why older guides still disagree.",
     category: "Loadout",
-    updated: "August 26, 2026",
-    readTime: "5 min",
+    updated: "August 30, 2026",
+    readTime: "6 min",
     quickAnswer:
-      "Start as the free Basic class if it appears in your lobby. The first paid class most beginner guides recommend is Smuggler, because it starts with a crowbar, a small backpack, and a large run-speed bonus. Confirm prices in the Classes menu — published tables conflict.",
+      "Start as free Basic if it is in your lobby. The first paid pick most beginner guides still like is Smuggler (crowbar, small backpack, +20% run speed, 49 Robux). Confirm the price in Classes — this table follows AllThings.How from late August 2026.",
+    classes: [
+      { name: "Basic", cost: "Free", loadout: "None", bonus: "None" },
+      { name: "Brawler", cost: "10,000 Credz", loadout: "Knuckle", bonus: "+5% Melee, -10% Run Speed" },
+      { name: "Scout", cost: "18,000 Credz", loadout: "Small Backpack, Bat", bonus: "+10% Run Speed, -5% Melee, -20% Health" },
+      { name: "Old CEO", cost: "33,000 Credz", loadout: "Gold Ruby Necklace, Diamond, Gold Tiara, Diamond Ring", bonus: "-5% Run Speed, -15% Health" },
+      { name: "Smuggler", cost: "49 Robux", loadout: "Small Backpack, Crowbar", bonus: "+20% Run Speed, -10% Melee" },
+      { name: "Contractor", cost: "45,000 Credz", loadout: "Mace, Light Bullet Pack, Pistol", bonus: "+10% Melee, +5% Health, -5% Run Speed" },
+      { name: "Medic", cost: "60,000 Credz", loadout: "2 Medic Bags, Light Armor, Medic Pack", bonus: "+20% Health, -5% Run Speed" },
+      { name: "Gang Member", cost: "85,000 Credz", loadout: "Blue Cow, Small Backpack, MAC, Light Bullet Pack", bonus: "+10% Run Speed, -5% Health" },
+      { name: "Bounty Hunter", cost: "160,000 Credz", loadout: "Machete, Light Bullet Pack, Pistol", bonus: "+20% Run Speed, +10% Melee" },
+      { name: "Breacher", cost: "280,000 Credz", loadout: "Medium Backpack, Shotgun, C4, Shotgun Bullet Pack", bonus: "+40% Melee" },
+      { name: "Juggernaut", cost: "450,000 Credz", loadout: "Light Armor, Minigun, Medium Backpack, Light Bullet Box", bonus: "+100% Health, -20% Run Speed" },
+      { name: "Ex-Military", cost: "559 Robux", loadout: "Heavy Armor, Heavy Bullet Pack, Sniper, Large Backpack", bonus: "+30% Melee, +15% Run Speed" },
+    ],
     sections: [
       {
         heading: "What a class actually changes",
         paragraphs: [
-          "Classes are lobby purchases. They set your starting loadout plus run speed, melee, and health before a run begins. You can switch after buying more than one.",
+          "Classes are lobby purchases. They set your starting loadout plus run speed, melee, and health before a run begins. AllThings.How says there are 12 classes, ownership is permanent, and you can switch between owned classes between runs.",
         ],
       },
       {
-        heading: "Names both major guides agree on",
+        heading: "What to buy first",
         bullets: [
-          "Smuggler: small backpack, crowbar, strong run-speed bonus. Common first recommendation.",
-          "Bounty Hunter: machete plus pistol, positive speed and melee. Mid/late goal in several guides.",
-          "Breacher: shotgun, C4, medium backpack. Vault specialist.",
-          "Juggernaut: minigun and a large health bonus with a speed penalty. Often named for the final border fight.",
+          "Basic: free. Use it until you can afford an upgrade.",
+          "Smuggler: still the common first paid pick because it starts with a crowbar and a large run-speed bonus. It is Robux-only in the AllThings.How table.",
+          "Brawler / Scout: the cheapest Credz upgrades if you do not want to spend Robux.",
+          "Bounty Hunter / Breacher / Juggernaut: later goals. Do not farm these before you can finish Kansas.",
         ],
       },
       {
-        heading: "Why this page has no full price table",
+        heading: "Why older tables still conflict",
         paragraphs: [
-          "LDPlayer (24 Aug 2026) and Beebom list different Credz and Robux costs for the same class names. Smuggler is 45,000 credits in one table and 49 Robux in the other. Publishing one table as fact would be inventing certainty.",
-          "Open Classes in the lobby and use the price shown there. If two sources disagree, the live menu wins.",
+          "LDPlayer (24 Aug 2026) and Beebom listed different Credz and Robux costs for the same names. This page now follows the dedicated AllThings.How class article instead of inventing a blend. If the live Classes menu disagrees, the live menu wins.",
         ],
       },
     ],
     sources: [
+      {
+        label: "AllThings.How class costs (late Aug 2026)",
+        url: "https://allthings.how/how-to-unlock-every-runaways-class-full-list-and-costs/",
+      },
       {
         label: "LDPlayer class table",
         url: "https://www.ldplayer.net/blog/roblox-runaways-beginners-guide.html",
