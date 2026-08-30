@@ -107,8 +107,10 @@
 补页：
 
 1. Co-op / multiplayer：已于 2026-08-30 发布。Steam 商店仍写 1–4 人；独立报道称 1.0.4 补丁后大厅为 8 人。页面保留冲突，以当前大厅人数为准。
-2. Quest items / trophies：按当前游戏内任务文本核验数量与交付对象后发布，避免复制冲突数值。
+2. Quest items / trophies：已于 2026-08-30 发布。保留 fin/tail 与鸟类昵称冲突；以游戏内任务文字与 inspect 结果为准。
 3. Fish prices / cooking：完成实测价格表，或 GSC 出现 price/cooking 查询后从现有页面拆分。
+
+运维备注（2026-08-30 下午）：含上述改动的 PR 尚未合并到 `main`，生产域名上的 `/guides/co-op-multiplayer`、两站 privacy/terms、GA4 仍未上线。合并后才能在 GSC 请求编入索引。
 
 本关收获文案：
 

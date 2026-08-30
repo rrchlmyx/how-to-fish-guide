@@ -198,6 +198,74 @@ export const guides: Guide[] = [
     ],
   },
   {
+    slug: "quest-items-trophies",
+    title: "How to Fish Quest Items and Boss Trophies",
+    description:
+      "Which boss drops unlock the next island, what not to sell or cook, and where community guides disagree on trophy names.",
+    category: "Progression",
+    updated: "August 30, 2026",
+    readTime: "7 min",
+    quickAnswer:
+      "A boss kill alone does not unlock the next island. Keep the distinctive trophy—meat, skeleton, fin/tail, head, or whole whale body—and hand it to the quest NPC. If the Radar does not change, inspect what you are carrying before farming more cash. Live quest text wins when guides disagree on names.",
+    sections: [
+      {
+        heading: "The hand-in rule",
+        paragraphs: [
+          "Current walkthroughs agree on the loop: finish the local NPC request, use the named bait, defeat the boss, keep the unusual drop, then return it. Selling, cooking, eating, or gambling the trophy is the most common reason the map does not move.",
+          "In co-op, assign one trophy carrier before the cast. A friend can hold the drop while you fight, but the quest only advances when the correct NPC receives it.",
+        ],
+        bullets: [
+          "Trigger: NPC request + special bait or lure.",
+          "Fight: defeat the intended story boss.",
+          "Proof: distinctive drop stays in inventory.",
+          "Advance: hand-in updates Radar coordinates or quest state.",
+        ],
+      },
+      {
+        heading: "Story trophies by route (reported)",
+        bullets: [
+          "Lighthouse / Spider Crab: Empty Beer Can bait. Hand Spider Crab meat to the Lighthouse Keeper for boat access / Forest route (AllThings.How).",
+          "Forest / Giant Piranha: Modified Leech after the leech request. Hand the Giant Piranha skeleton to the lake NPC for Desert coordinates.",
+          "Desert / Pufferfish: Carrot from the tourist chain. Guides disagree on the drop name—fin versus tail. Inspect the item and follow the live quest wording.",
+          "Rocks / Albatross (also called Terrorizing Bird): Professional Boss Lure → Tuna → bird fight. Hand the bird head to the Rocks shop NPC for Volcano coordinates.",
+          "Volcano / Whale route: Fish Bucket for Bowhead Whale, then throw that whale body into the volcano to start Mutated Bowhead Whale. Finish the military / scientist sequence for the final mainland route.",
+        ],
+      },
+      {
+        heading: "Optional boss-lure trophies versus story trophies",
+        paragraphs: [
+          "Purchasable Beginner / Standard / Professional / Scientific Boss Lures open side bosses such as Old Pike, Blue Shark, Tuna, and Goblin Shark. Those fights are useful for money and collection, but they do not replace the story hand-ins above.",
+          "If a boss never appears, the blocker is usually the NPC step or bait, not weapon damage. If it dies and the map stays put, the trophy never reached the quest giver.",
+        ],
+      },
+      {
+        heading: "What this page will not invent",
+        paragraphs: [
+          "Community guides conflict on a few trophy nicknames and on exact leech counts. This page does not publish a fake permanent item ID table. After Patch 1.0.5, sailing to locked islands is blocked, so old “sail straight to Volcano” advice is obsolete.",
+          "Use inspect (F) on every unusual drop. If two sources disagree, keep the item until the NPC reacts or the quest text tells you otherwise.",
+        ],
+      },
+    ],
+    sources: [
+      {
+        label: "AllThings.How — full island and boss progression",
+        url: "https://allthings.how/how-to-fish-full-island-and-boss-progression-walkthrough/",
+      },
+      {
+        label: "AllThings.How — defeat all bosses / hand-ins",
+        url: "https://allthings.how/how-to-fish-how-to-defeat-all-bosses/",
+      },
+      {
+        label: "AllThings.How — unlock every island",
+        url: "https://allthings.how/how-to-fish-how-to-unlock-every-island-forest-desert-rocks-volcano/",
+      },
+      {
+        label: "9Puz — five-island route and trophy rule (checked Aug 26, 2026)",
+        url: "https://9puz.com/5262-how-to-fish-progression-walkthrough/",
+      },
+    ],
+  },
+  {
     slug: "islands-progression",
     title: "All Islands and Progression Order",
     description:

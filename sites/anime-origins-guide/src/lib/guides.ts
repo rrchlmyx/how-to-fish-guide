@@ -92,7 +92,7 @@ export const guides: Guide[] = [
     updated: "August 30, 2026",
     readTime: "4 min",
     quickAnswer:
-      "Rechecked 30 August 2026: GameRant still lists 100K!, HappyPatch!, ChallengesFixed, GAMESPEED, TYKaito!, THANKYOU!, Origins, AO, and Release! as active, with no expired table. Redeem on the orange Codes button after Level 10. Copy punctuation exactly.",
+      "Rechecked again 30 August 2026 (UTC afternoon): the same nine strings are still listed as active, with empty expired tables. Redeem on the orange Codes button after Level 10. Copy punctuation exactly.",
     codes: [
       {
         code: "100K!",
@@ -140,7 +140,7 @@ export const guides: Guide[] = [
       {
         heading: "Still listed as active (30 August 2026)",
         paragraphs: [
-          "GameRant, Pocket Tactics, Khelnow, and Beebom still show the same nine strings and an empty expired list. We did not flatten HappyPatch! or GAMESPEED into one invented pile.",
+          "Afternoon recheck against GameRant, Pocket Tactics, Khelnow, Beebom, and BloxInformer: same nine strings, empty expired lists. We did not flatten HappyPatch! or GAMESPEED into one invented pile.",
         ],
         note: "We do not invent a single flattened reward table when sources conflict. Copy-paste exactly, including punctuation, then believe the reward popup.",
       },

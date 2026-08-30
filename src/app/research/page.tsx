@@ -45,6 +45,7 @@ const matrix = [
   ["Start Here", "how to fish controls", "/guides/controls", "Keyboard and fishing actions", "P0"],
   ["Start Here", "how to fish co-op", "/guides/co-op-multiplayer", "Host, join, and lobby-size conflict", "P0"],
   ["Progression", "how to fish islands", "/guides/islands-progression", "Unlock order and hand-ins", "P0"],
+  ["Progression", "how to fish quest items", "/guides/quest-items-trophies", "Boss trophies and hand-ins", "P0"],
   ["Gear", "how to fish lures", "/guides/lures-and-baits", "Lure tiers and boss bait", "P0"],
   ["Collection", "how to fish fish list", "/guides/fish-list", "Species by island", "P0"],
   ["Gear", "how to fish best weapons", "/guides/weapons-and-upgrades", "Purchase and upgrade order", "P0"],
@@ -60,6 +61,7 @@ const keywordRows = [
   ["General need", "how to fish controls", "Learn keyboard, fishing, combat, and hand-ins", "Controls guide"],
   ["General need", "how to fish co-op", "Host or join a session and know the lobby cap", "Co-op guide"],
   ["Specific need", "how to fish islands", "Find the unlock order and required quest items", "Islands guide"],
+  ["Specific need", "how to fish quest items", "Keep the right trophy and complete the hand-in", "Quest items guide"],
   ["Specific need", "how to fish lures", "Match lure tiers and boss bait to locations", "Lures guide"],
   ["Specific need", "how to fish fish list", "Check species by island and collection progress", "Fish list"],
   ["Specific need", "how to fish best weapons", "Choose purchases and upgrades in the right order", "Weapons guide"],
@@ -75,6 +77,7 @@ const sourceRows = [
   ["/guides/controls", "GrindNStrat · /how-to-fish-game-islands-guide/", "Steam · store.steampowered.com/app/4001890", "Controls, fishing actions, combat context"],
   ["/guides/co-op-multiplayer", "Steam · store.steampowered.com/app/4001890", "Player.one · launch recap / patch 1.0.4 lobby note", "Player count, invites, private sessions"],
   ["/guides/islands-progression", "AllThings.How · /full-island-and-boss-progression-walkthrough/", "AllThings.How · /how-to-unlock-every-island-forest-desert-rocks-volcano/", "Island order, hand-ins, boss gates"],
+  ["/guides/quest-items-trophies", "AllThings.How · /how-to-fish-how-to-defeat-all-bosses/", "9Puz · five-island route / trophy rule", "Trophy names, hand-ins, co-op carrier rule"],
   ["/guides/lures-and-baits", "NerdsChalk · /how-to-fish-every-lure-bait-catch/", "TposeGaming · /how-to-fish-game-bait/", "Lure tiers, catch pools, boss bait"],
   ["/guides/fish-list", "Times of India · /list-of-all-fish-how-to-get-them/", "AllThings.How · /all-fish-species-by-island-and-how-to-catch-them/", "Species, islands, collection checks"],
   ["/guides/weapons-and-upgrades", "AllThings.How · /the-upgrades-and-weapons-worth-buying-first/", "GrindNStrat · /how-to-fish-game-islands-guide/", "Purchase order, weapons, upgrades"],
@@ -204,7 +207,7 @@ export default function ResearchPage() {
           <h3>Supplement pages</h3>
           <ol className="supplement-list">
             <li><strong>Co-op and multiplayer</strong><span>Published 30 Aug 2026. Steam still says 1–4 players; patch reporting says 8 after 1.0.4. Live lobby UI wins.</span></li>
-            <li><strong>Quest items and trophies</strong><span>Still waiting for in-game quantity checks. Do not copy conflicting wiki counts.</span></li>
+            <li><strong>Quest items and trophies</strong><span>Published 30 Aug 2026. Hand-in rule + reported trophies. Fin vs tail and bird nicknames stay flagged.</span></li>
             <li><strong>Fish prices and cooking</strong><span>Still waiting for a tested price table or GSC queries for price/cooking.</span></li>
           </ol>
           <p className="method-note">

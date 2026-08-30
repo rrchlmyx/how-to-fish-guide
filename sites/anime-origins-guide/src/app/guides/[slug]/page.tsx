@@ -127,6 +127,19 @@ export default async function GuidePage(props: PageProps<"/guides/[slug]">) {
             ))}
           </ol>
         </section>
+        <section>
+          <h2>Keep summoning</h2>
+          <ul>
+            {guides
+              .filter((item) => item.slug !== guide.slug)
+              .slice(0, 5)
+              .map((item) => (
+                <li key={item.slug}>
+                  <Link href={`/guides/${item.slug}`}>{item.title}</Link>
+                </li>
+              ))}
+          </ul>
+        </section>
       </article>
     </PageFrame>
   );

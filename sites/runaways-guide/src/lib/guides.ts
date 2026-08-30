@@ -107,7 +107,7 @@ export const guides: Guide[] = [
     updated: "August 30, 2026",
     readTime: "3 min",
     quickAnswer:
-      "Rechecked 30 August 2026: major outlets still list SUPERCAT for a Light Pistol and RUN for Credz. GameRant and AllThings.How say RUN is 1,000 Credz; Beebom and PCGamesN say 2k. Redeem in Shop → Codes. Trust the in-game grant.",
+      "Rechecked again 30 August 2026 (UTC afternoon): SUPERCAT and RUN still listed; no new codes and no expired table. GameRant / AllThings.How say RUN is 1,000 Credz; Beebom / PCGamesN say 2k. Redeem in Shop → Codes. Trust the in-game grant.",
     codes: [
       {
         code: "SUPERCAT",
@@ -124,7 +124,7 @@ export const guides: Guide[] = [
       {
         heading: "Codes still listed on 30 August 2026",
         paragraphs: [
-          "No tracker we checked today had moved SUPERCAT or RUN into an expired table. That is not a promise they will still work tonight.",
+          "Afternoon recheck against GameRant, Beebom, PCGamesN, and ValoSettings: still only SUPERCAT and RUN, still no expired list. That is not a promise they will work tonight.",
         ],
         note: "Promo codes change quickly. If a code fails, it is probably expired, already claimed, or typed with the wrong case — not a site error.",
       },
