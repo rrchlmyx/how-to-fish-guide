@@ -1,0 +1,27 @@
+---
+description: Shared project rules for the three hot-word game guide sites
+alwaysApply: true
+---
+
+# 游戏热词站（两台电脑共用）
+
+This repo is the shareable Cursor project state. Both machines get the same Agent behavior after `git pull`. Cursor account login does **not** sync local chats, extensions, keybindings, or `~/.cursor/` files.
+
+## Sites
+
+- How to Fish / Hook & Haul: repo root (`src/`), live `https://how-to-fish-guide-mu.vercel.app`
+- RUNAWAYS / State Line: `sites/runaways-guide/`, live `https://runaways-guide.vercel.app`
+- Anime Origins / Summon Desk: `sites/anime-origins-guide/`, live `https://anime-origins-guide-ten.vercel.app`
+
+## Editorial
+
+- Do not invent codes, prices, trophy names, KD, or search volume.
+- Every published claim needs a linked source. When sources conflict, keep both and tell the reader to trust the live game UI.
+- Story trophies must not be treated as sell fodder. Link cooking/price pages back to the hand-in rule.
+- Promo-code pages need a recache date in the title, quick answer, and `updated` field.
+
+## Code
+
+- Guides live in each site's `src/lib/guides.ts`. Adding a slug is enough for `/guides/[slug]` because `generateStaticParams` reads that array.
+- Keep facts in data files. Match existing voice, CSS, and source-policy copy.
+- Do not edit `AGENTS.md` / `CLAUDE.md`; Next.js regenerates those agent-rule blocks.
