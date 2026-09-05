@@ -100,14 +100,14 @@ export const guides: Guide[] = [
   },
   {
     slug: "codes",
-    title: "RUNAWAYS Codes (August 2026)",
+    title: "RUNAWAYS Codes (September 2026)",
     description:
       "Working RUNAWAYS Roblox codes, what they grant, and how to redeem them in the Shop menu.",
     category: "Start Here",
-    updated: "August 30, 2026",
+    updated: "September 5, 2026",
     readTime: "3 min",
     quickAnswer:
-      "Rechecked again 30 August 2026 (UTC afternoon): SUPERCAT and RUN still listed; no new codes and no expired table. GameRant / AllThings.How say RUN is 1,000 Credz; Beebom / PCGamesN say 2k. Redeem in Shop → Codes. Trust the in-game grant.",
+      "Rechecked 5 September 2026: SUPERCAT and RUN are still the only listed strings. No expired table. MemuPlay (2 Sep) lists RUN as 1,000 Credz; Player.one / Dexerto / PCGamesN still say 2k. Redeem in Shop → Codes. Trust the in-game grant.",
     codes: [
       {
         code: "SUPERCAT",
@@ -122,9 +122,9 @@ export const guides: Guide[] = [
     ],
     sections: [
       {
-        heading: "Codes still listed on 30 August 2026",
+        heading: "Codes still listed on 5 September 2026",
         paragraphs: [
-          "Afternoon recheck against GameRant, Beebom, PCGamesN, and ValoSettings: still only SUPERCAT and RUN, still no expired list. That is not a promise they will work tonight.",
+          "September recache against UrGameTips (1 Sep), MemuPlay (2 Sep), Player.one, Dexerto, and PCGamesN: still only SUPERCAT and RUN, still no expired list. That is not a promise they will work tonight.",
         ],
         note: "Promo codes change quickly. If a code fails, it is probably expired, already claimed, or typed with the wrong case — not a site error.",
       },
@@ -138,8 +138,12 @@ export const guides: Guide[] = [
     ],
     sources: [
       {
-        label: "GameRant codes list",
-        url: "https://gamerant.com/runaways-codes-roblox/",
+        label: "UrGameTips codes (1 Sep 2026)",
+        url: "https://urgametips.com/runaways-codes/",
+      },
+      {
+        label: "MemuPlay codes (2 Sep 2026)",
+        url: "https://www.memuplay.com/blog/roblox-runaways-codes.html",
       },
       {
         label: "GamesRadar codes (25 Aug 2026)",

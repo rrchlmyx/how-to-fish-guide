@@ -7,6 +7,7 @@ const navItems = [
   { href: "/guides/islands-progression", label: "Islands" },
   { href: "/guides/lures-and-baits", label: "Lures" },
   { href: "/guides/fish-list", label: "Fish List" },
+  { href: "/guides/cooking-and-prices", label: "Prices" },
 ];
 
 export function FishMark({ small = false }: { small?: boolean }) {
@@ -76,6 +77,7 @@ export function SiteFooter() {
           <Link href="/guides/co-op-multiplayer">Co-op</Link>
           <Link href="/guides/quest-items-trophies">Quest trophies</Link>
           <Link href="/guides/fish-list">Collection</Link>
+          <Link href="/guides/cooking-and-prices">Cooking &amp; prices</Link>
         </div>
         <div>
           <h2>Site</h2>

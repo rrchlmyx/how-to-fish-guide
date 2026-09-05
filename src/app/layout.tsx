@@ -43,6 +43,8 @@ export const metadata: Metadata = {
     "How to Fish islands",
     "How to Fish lures",
     "How to Fish fish list",
+    "How to Fish cooking",
+    "How to Fish prices",
   ],
   openGraph: {
     title: "Hook & Haul — How to Fish Game Guides",

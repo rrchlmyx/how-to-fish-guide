@@ -85,14 +85,14 @@ export const guides: Guide[] = [
   },
   {
     slug: "codes",
-    title: "Anime Origins Codes (August 2026)",
+    title: "Anime Origins Codes (September 2026)",
     description:
       "Working Anime Origins Roblox codes, listed rewards, and conflict notes when outlets disagree.",
     category: "Start Here",
-    updated: "August 30, 2026",
+    updated: "September 5, 2026",
     readTime: "4 min",
     quickAnswer:
-      "Rechecked again 30 August 2026 (UTC afternoon): the same nine strings are still listed as active, with empty expired tables. Redeem on the orange Codes button after Level 10. Copy punctuation exactly.",
+      "Rechecked 5 September 2026: the same nine strings are still listed as active, with empty expired tables. Pocket Tactics (1 Sep) and MemuPlay (2 Sep) now agree on HappyPatch! and GAMESPEED piles. Redeem on the orange Codes button after Level 10. Copy punctuation exactly.",
     codes: [
       {
         code: "100K!",
@@ -101,18 +101,18 @@ export const guides: Guide[] = [
       },
       {
         code: "HappyPatch!",
-        reward: "Trait Rerolls + Prisms + Gems (pile disputed)",
-        note: "GameRant: 10 / 5 / 5 / 850 Gems. Khelnow and Beebom list a larger pile. Trust the popup.",
+        reward: "10 Trait Rerolls, 5 Perfect Stat Prisms, 5 Stat Prisms, 850 Gems",
+        note: "Pocket Tactics (1 Sep) and MemuPlay (2 Sep) match this pile. Earlier lists disagreed. Trust the popup.",
       },
       {
         code: "ChallengesFixed",
-        reward: "10 Trait Rerolls, 750 Gems, Remnant mix",
-        note: "Remnant counts are disputed across trackers.",
+        reward: "10 Trait Rerolls, 750 Gems, 10 Azure / 5 Violet / 2 Radiant / 1 Prismatic Remnant",
+        note: "Remnant mix from Pocket Tactics and MemuPlay. Older trackers were vaguer.",
       },
       {
         code: "GAMESPEED",
-        reward: "Gems + Trait Rerolls + Stat Prisms (wording disputed)",
-        note: "GameRant includes 750 Gems; some tables omit Gems.",
+        reward: "750 Gems, 10 Trait Rerolls, 5 Stat Prisms",
+        note: "September trackers agree. Some August tables omitted Gems.",
       },
       {
         code: "TYKaito!",
@@ -138,9 +138,9 @@ export const guides: Guide[] = [
     ],
     sections: [
       {
-        heading: "Still listed as active (30 August 2026)",
+        heading: "Still listed as active (5 September 2026)",
         paragraphs: [
-          "Afternoon recheck against GameRant, Pocket Tactics, Khelnow, Beebom, and BloxInformer: same nine strings, empty expired lists. We did not flatten HappyPatch! or GAMESPEED into one invented pile.",
+          "September recache against Pocket Tactics (1 Sep), MemuPlay (2 Sep), PCGamesN (31 Aug), and Destructoid: same nine strings, empty expired lists. HappyPatch! and GAMESPEED now have a matching pile across the September tables; we still tell you to believe the reward popup.",
         ],
         note: "We do not invent a single flattened reward table when sources conflict. Copy-paste exactly, including punctuation, then believe the reward popup.",
       },
@@ -158,8 +158,12 @@ export const guides: Guide[] = [
         url: "https://gamerant.com/anime-origins-codes-discord-server-roblox/",
       },
       {
-        label: "Pocket Tactics codes (20 Aug 2026)",
+        label: "Pocket Tactics codes (1 Sep 2026)",
         url: "https://www.pockettactics.com/anime-origins-codes",
+      },
+      {
+        label: "MemuPlay codes (2 Sep 2026)",
+        url: "https://www.memuplay.com/blog/roblox-anime-origins-codes.html",
       },
       {
         label: "Khelnow August codes roundup",

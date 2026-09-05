@@ -4,6 +4,13 @@ export type GuideSection = {
   bullets?: string[];
 };
 
+export type PriceRow = {
+  name: string;
+  raw: string;
+  cooked: string;
+  note?: string;
+};
+
 export type Guide = {
   slug: string;
   title: string;
@@ -14,6 +21,7 @@ export type Guide = {
   quickAnswer: string;
   sections: GuideSection[];
   sources: { label: string; url: string }[];
+  prices?: PriceRow[];
 };
 
 export const guides: Guide[] = [
@@ -509,6 +517,7 @@ export const guides: Guide[] = [
         heading: "The real money loop",
         paragraphs: [
           "Profit is not only the sale value of one fish. It is sale value multiplied by how many safe catches you complete per trip. A slightly cheaper pool can outperform a dangerous tier if repeated deaths or travel waste most of the session.",
+          "Cooking is a separate 1.5x step, not a guess. Use the cooking and prices guide for the grill, lava, and listed sell values. Do not cook or sell a distinctive boss trophy before the quest hand-in.",
         ],
         bullets: [
           "Use the best regular lure supported by your current island.",
@@ -543,6 +552,182 @@ export const guides: Guide[] = [
       {
         label: "GrindNStrat — cooking and progression",
         url: "https://grindnstrat.com/how-to-fish-game-islands-guide/",
+      },
+    ],
+  },
+  {
+    slug: "cooking-and-prices",
+    title: "How to Fish Cooking and Fish Prices",
+    description:
+      "How the 1.5x grill and lava cook work, listed sell values from current guides, and why story trophies still should not go in the shopkeeper’s mouth.",
+    category: "Progression",
+    updated: "September 5, 2026",
+    readTime: "7 min",
+    quickAnswer:
+      "Unlock the grill on island 3, inspect with F, and pull the item at 1.5x before it turns solid black. Island 5 lava applies the same 1.5x with no burn risk. Among listed raw prices, the Goblin Shark is $6,200 ($9,300 cooked). Mutated Bowhead Whale is the highest reported creature value at $15,000. Do not sell a quest trophy.",
+    prices: [
+      {
+        name: "Mutated Bowhead Whale",
+        raw: "$15,000",
+        cooked: "$22,500",
+        note: "NerdsChalk v1.0.4 table. Story / endgame creature — inspect before selling.",
+      },
+      {
+        name: "Albatross",
+        raw: "$13,000",
+        cooked: "$19,500",
+        note: "Story trophy (bird head). Hand in before any sale.",
+      },
+      {
+        name: "Pufferfish",
+        raw: "$12,000",
+        cooked: "$18,000",
+        note: "Story trophy (fin/tail name conflict). Hand in first.",
+      },
+      {
+        name: "Giant Piranha",
+        raw: "$11,000",
+        cooked: "$16,500",
+        note: "Story trophy (skeleton). Hand in first.",
+      },
+      {
+        name: "Spider Crab",
+        raw: "$10,000",
+        cooked: "$15,000",
+        note: "Story trophy (meat). Hand in first.",
+      },
+      {
+        name: "Bowhead Whale",
+        raw: "$8,000",
+        cooked: "$12,000",
+        note: "Used in the volcano experiment. Do not sell the required body.",
+      },
+      {
+        name: "Goblin Shark",
+        raw: "$6,200",
+        cooked: "$9,300",
+        note: "Highest exact listed fish price. Safe late-game sale once it is not a quest drop.",
+      },
+      {
+        name: "Tuna",
+        raw: "$2,000",
+        cooked: "$3,000",
+        note: "Appears in the Rocks bird chain. Confirm it is not the required lure catch.",
+      },
+      {
+        name: "Superdwarf Fish",
+        raw: "$1,700",
+        cooked: "$2,550",
+        note: "Exact listed value. Weight reported as 0.0001.",
+      },
+      {
+        name: "Stonefish",
+        raw: "$1,500",
+        cooked: "$2,250",
+      },
+      {
+        name: "Anglerfish",
+        raw: "$1,500",
+        cooked: "$2,250",
+      },
+      {
+        name: "Oarfish",
+        raw: "$1,450",
+        cooked: "$2,175",
+      },
+      {
+        name: "Blobfish",
+        raw: "$1,360",
+        cooked: "$2,040",
+      },
+      {
+        name: "Dripper",
+        raw: "$380",
+        cooked: "$570",
+      },
+      {
+        name: "Voxel Fish",
+        raw: "$340",
+        cooked: "$510",
+        note: "Exact listed value.",
+      },
+      {
+        name: "Parrotfish",
+        raw: "$350",
+        cooked: "$525",
+      },
+      {
+        name: "Flying Fish",
+        raw: "$320",
+        cooked: "$480",
+        note: "Exact listed value.",
+      },
+      {
+        name: "Clam",
+        raw: "$1",
+        cooked: "—",
+        note: "Starting shoreline sale. Cooked value not listed.",
+      },
+    ],
+    sections: [
+      {
+        heading: "How selling actually works",
+        paragraphs: [
+          "There is no checkout menu. Pick an item with E, walk to the shopkeeper on the lighthouse bench, aim at him, and hold Q to throw it into his mouth. The same throw sells fish, guns, and other pickups on later islands.",
+          "A +$ popup is the only confirmation. If nothing appears, you missed the mouth or the item is not a sale.",
+        ],
+      },
+      {
+        heading: "Grill cooking (island 3)",
+        paragraphs: [
+          "The grill unlocks on island 3 and is the first 1.5x money multiplier. It works on fish, guns, and other sellable items. Press F to inspect and watch Value, cooking multiplier, weight, and killscore update over the flame.",
+          "Pull the item the moment the multiplier hits 1.5x. If it turns solid black it is burnt: sale value drops to $0 and it barely heals. Burn one creature only if an achievement asks for it.",
+        ],
+        bullets: [
+          "Low health or hunger: eat a raw catch if you need the bars now.",
+          "Selling: grill to 1.5x, then throw.",
+          "Boss prep: bank a cooked stack for mid-fight heals.",
+          "Weapons: cook them before selling too. The same 1.5x applies.",
+        ],
+      },
+      {
+        heading: "Lava cooking (island 5)",
+        paragraphs: [
+          "The volcano removes the timing minigame. Lava locks the item at exactly 1.5x with no burn risk. Current guides say there is no reason to sell a raw catch on island 5.",
+          "Late-game money is still island 5 plus Scientific Lures, then lava-cook the haul. Kill multipliers such as a 360 no-scope (reported as another 1.5x) stack on value before cooking. This page does not invent extra trick-shot rates that sources do not list.",
+        ],
+      },
+      {
+        heading: "What the price table is — and is not",
+        paragraphs: [
+          "Only a small set of species has exact sell prices in published tables. NerdsChalk and AllThings.How agree on Goblin Shark $6,200 / $9,300 cooked, Superdwarf Fish $1,700 / $2,550, Voxel Fish $340 / $510, and Flying Fish $320 / $480. The wider top-earner list is NerdsChalk’s v1.0.4 table (checked 24 August 2026). Cooked figures there are the documented 1.5x multiplier, not a second in-game dump.",
+          "Inspect (F) always wins after a patch. If a live Value readout disagrees with this table, trust the readout.",
+        ],
+      },
+      {
+        heading: "Rich! Millionaire is a roulette sale, not a catch",
+        paragraphs: [
+          "No naturally caught fish sells for $100,000. The achievement checks the item you actually sell. Current guides route a cooked high-value fish through Reel of Fortune green, which pays 35x and returns an item to sell.",
+          "At 35x you need a cooked bet of at least $2,858 ($100,000 ÷ 35). A Goblin Shark at $9,300 cooked clears that with room. Green is one pocket in 37. Winning on green is also the reported All In route. Gamble only fish you can afford to lose, and never a required trophy.",
+        ],
+      },
+    ],
+    sources: [
+      {
+        label: "NerdsChalk — most valuable fish and sell values",
+        url: "https://nerdschalk.com/most-valuable-fish-sell-values-how-to-fish/",
+      },
+      {
+        label: "NerdsChalk — cooking, grill, and lava",
+        url: "https://nerdschalk.com/how-cooking-works-how-to-fish/",
+      },
+      {
+        label: "AllThings.How — sell items and boost value",
+        url: "https://allthings.how/how-to-fish-how-to-sell-items-and-boost-their-value/",
+      },
+      {
+        label: "NerdsChalk — eating, hunger, and grilling",
+        url: "https://nerdschalk.com/how-to-fish-eating-hunger-grilling/",
       },
     ],
   },
