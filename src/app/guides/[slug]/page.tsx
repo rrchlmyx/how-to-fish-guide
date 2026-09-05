@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/json-ld";
+import { PriceTable } from "@/components/price-table";
 import { PageFrame } from "@/components/site-shell";
 import { getGuide, guides } from "@/lib/guides";
 import { absoluteUrl, siteUrl } from "@/lib/site";
@@ -25,7 +26,10 @@ export async function generateMetadata(
       title: guide.title,
       description: guide.description,
       type: "article",
-      modifiedTime: "2026-08-30T00:00:00.000Z",
+      modifiedTime:
+        guide.slug === "cooking-and-prices"
+          ? "2026-09-05T00:00:00.000Z"
+          : "2026-08-30T00:00:00.000Z",
     },
   };
 }
@@ -47,8 +51,9 @@ export default async function GuidePage(props: PageProps<"/guides/[slug]">) {
         "@type": "Article",
         headline: guide.title,
         description: guide.description,
-        datePublished: "2026-08-25",
-        dateModified: "2026-08-30",
+        datePublished: guide.slug === "cooking-and-prices" ? "2026-09-05" : "2026-08-25",
+        dateModified:
+          guide.slug === "cooking-and-prices" ? "2026-09-05" : "2026-08-30",
         mainEntityOfPage: pageUrl,
         url: pageUrl,
         inLanguage: "en",
@@ -117,6 +122,8 @@ export default async function GuidePage(props: PageProps<"/guides/[slug]">) {
             <span>Quick answer</span>
             <p>{guide.quickAnswer}</p>
           </aside>
+
+          {guide.prices ? <PriceTable rows={guide.prices} /> : null}
 
           {guide.sections.map((section, index) => (
             <section key={section.heading} id={`section-${index + 1}`}>

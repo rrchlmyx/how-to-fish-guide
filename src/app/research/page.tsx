@@ -50,6 +50,7 @@ const matrix = [
   ["Collection", "how to fish fish list", "/guides/fish-list", "Species by island", "P0"],
   ["Gear", "how to fish best weapons", "/guides/weapons-and-upgrades", "Purchase and upgrade order", "P0"],
   ["Progression", "how to fish money guide", "/guides/money-guide", "Efficient farming loop", "P1"],
+  ["Progression", "how to fish cooking", "/guides/cooking-and-prices", "Grill, lava, listed sell values", "P1"],
   ["Progression", "how to fish bosses", "/guides/bosses", "Boss triggers and trophies", "P1"],
   ["Gear", "how to fish radar", "/guides/radar-and-navigation", "Markers and boat upgrades", "P1"],
   ["Collection", "how to fish achievements", "/guides/achievements", "Story and cleanup roadmap", "P1"],
@@ -66,6 +67,7 @@ const keywordRows = [
   ["Specific need", "how to fish fish list", "Check species by island and collection progress", "Fish list"],
   ["Specific need", "how to fish best weapons", "Choose purchases and upgrades in the right order", "Weapons guide"],
   ["Specific need", "how to fish money guide", "Build a repeatable farming and selling loop", "Money guide"],
+  ["Specific need", "how to fish cooking", "Cook for 1.5x and check listed sell prices", "Cooking and prices"],
   ["Specific need", "how to fish bosses", "Trigger bosses and protect required trophies", "Boss guide"],
   ["Specific need", "how to fish radar", "Understand markers, routes, and boat upgrades", "Radar guide"],
   ["Specific need", "how to fish achievements", "Plan story achievements and cleanup", "Achievements guide"],
@@ -82,6 +84,7 @@ const sourceRows = [
   ["/guides/fish-list", "Times of India · /list-of-all-fish-how-to-get-them/", "AllThings.How · /all-fish-species-by-island-and-how-to-catch-them/", "Species, islands, collection checks"],
   ["/guides/weapons-and-upgrades", "AllThings.How · /the-upgrades-and-weapons-worth-buying-first/", "GrindNStrat · /how-to-fish-game-islands-guide/", "Purchase order, weapons, upgrades"],
   ["/guides/money-guide", "NerdsChalk · /how-to-fish-every-lure-bait-catch/", "GrindNStrat · /how-to-fish-game-islands-guide/", "Catch values, cooking, repeatable farming loop"],
+  ["/guides/cooking-and-prices", "NerdsChalk · /most-valuable-fish-sell-values-how-to-fish/", "AllThings.How · /how-to-sell-items-and-boost-their-value/", "Listed prices, 1.5x grill/lava, roulette sale"],
   ["/guides/bosses", "AllThings.How · /full-island-and-boss-progression-walkthrough/", "IndieBunny · /lure-guide-every-fish-boss-by-island-location", "Boss triggers, locations, trophies"],
   ["/guides/radar-and-navigation", "AllThings.How · /how-to-unlock-every-island-forest-desert-rocks-volcano/", "Wiki · howtofishgame.wiki/guides/getting-started", "Routes, markers, unlock context"],
   ["/guides/achievements", "Steam Community · /stats/4001890/achievements", "Wiki · howtofishgame.wiki/guides/getting-started", "Achievement list, story order, cleanup"],
@@ -200,7 +203,7 @@ export default function ResearchPage() {
             <div><span>Website</span><strong>how-to-fish-guide-mu.vercel.app</strong></div>
             <div><span>GSC collection</span><strong>Started 26 Aug 2026 (Google email 28 Aug)</strong></div>
             <div><span>GSC query report</span><strong>Not independently readable here</strong></div>
-            <div><span>Public site: index</span><strong>Still empty as of 30 Aug 2026</strong></div>
+            <div><span>Public site: index</span><strong>Still empty as of 5 Sep 2026</strong></div>
             <div><span>GSC sitemap</span><strong>Submitted · keep lastmod fresh</strong></div>
             <div><span>Current decision</span><strong>Technical keep-alive, not a ranking call</strong></div>
           </div>
@@ -208,14 +211,14 @@ export default function ResearchPage() {
           <ol className="supplement-list">
             <li><strong>Co-op and multiplayer</strong><span>Published 30 Aug 2026. Steam still says 1–4 players; patch reporting says 8 after 1.0.4. Live lobby UI wins.</span></li>
             <li><strong>Quest items and trophies</strong><span>Published 30 Aug 2026. Hand-in rule + reported trophies. Fin vs tail and bird nicknames stay flagged.</span></li>
-            <li><strong>Fish prices and cooking</strong><span>Still waiting for a tested price table or GSC queries for price/cooking.</span></li>
+            <li><strong>Fish prices and cooking</strong><span>Published 5 Sep 2026 from NerdsChalk / AllThings.How listed values. Story trophies stay flagged as do-not-sell. Live inspect (F) wins after patches.</span></li>
           </ol>
           <p className="method-note">
             Google confirmed it began collecting Search impressions on 26 August 2026.
             That is not the same as a usable query report or proof of ranking. A public
-            site: search on 30 August 2026 still returned no indexed URLs, so this review
-            stays in the technical bucket. Next formal reviews: day 7 on September 1 and
-            day 14 on September 8.
+            site: search on 5 September 2026 still returned no indexed URLs, so this review
+            stays in the technical bucket. Day 7 (1 Sep) had no new public index signal.
+            Next formal ranking review: day 14 on September 8, if GSC queries exist.
           </p>
         </div>
       </section>

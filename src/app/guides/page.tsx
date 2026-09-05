@@ -8,7 +8,7 @@ import { absoluteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "All How to Fish Guides",
   description:
-    "Browse source-linked How to Fish guides covering beginner progression, islands, lures, fish, weapons, bosses, navigation, money, and achievements.",
+    "Browse source-linked How to Fish guides covering beginner progression, islands, lures, fish, cooking, weapons, bosses, navigation, money, and achievements.",
   alternates: { canonical: "/guides" },
 };
 
@@ -33,7 +33,7 @@ export default function GuidesPage() {
           <span className="eyebrow">Field guide index</span>
           <h1>Every answer, sorted by the problem you are solving.</h1>
           <p>
-            Ten focused pages built from current sources. No padded news, invented
+            Focused pages built from current sources. No padded news, invented
             values, or copy-pasted game text.
           </p>
         </div>

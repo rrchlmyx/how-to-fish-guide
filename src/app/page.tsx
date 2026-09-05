@@ -46,7 +46,7 @@ export default function Home() {
         </div>
         <div className="shell hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow">Independent field guide · Updated Aug 30, 2026</span>
+            <span className="eyebrow">Independent field guide · Updated Sep 5, 2026</span>
             <h1>
               Catch smarter.
               <br />
@@ -65,7 +65,7 @@ export default function Home() {
               </Link>
             </div>
             <div className="signal-row" aria-label="Guide status">
-              <span><i className="signal-dot" />12 focused guides</span>
+              <span><i className="signal-dot" />{guides.length} focused guides</span>
               <span>Source-linked</span>
               <span>Trophy hand-ins covered</span>
             </div>
@@ -118,7 +118,7 @@ export default function Home() {
             <span className="eyebrow dark">Field notes</span>
             <h2>Get unstuck fast</h2>
           </div>
-          <Link href="/guides">View all 10 guides <span aria-hidden="true">→</span></Link>
+          <Link href="/guides">View all {guides.length} guides <span aria-hidden="true">→</span></Link>
         </div>
         <div className="guide-grid">
           {featured.map((guide, index) => (

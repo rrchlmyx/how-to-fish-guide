@@ -101,16 +101,20 @@
 - RUNAWAYS：`https://runaways-guide.vercel.app/`
 - Anime Origins：`https://anime-origins-guide-ten.vercel.app/`
 - GSC：How to Fish 与 RUNAWAYS 已于 2026-08-26 开始收集展示（Google 邮件，2026-08-28）。Anime Origins 于 2026-08-29 收到验证欢迎邮件。
-- 公开 `site:` 检索：2026-08-30 仍无索引结果，因此不做排名或换词判断。
-- 下次正式复盘：上线第 7 天（2026-09-01）与第 14 天（2026-09-08）
+- 公开 `site:` 检索：2026-09-05 仍无索引结果，因此不做排名或换词判断。
+- 下次正式复盘：上线第 14 天（2026-09-08）。第 7 天（2026-09-01）没有新的公开收录信号。
 
 补页：
 
 1. Co-op / multiplayer：已于 2026-08-30 发布。Steam 商店仍写 1–4 人；独立报道称 1.0.4 补丁后大厅为 8 人。页面保留冲突，以当前大厅人数为准。
 2. Quest items / trophies：已于 2026-08-30 发布。保留 fin/tail 与鸟类昵称冲突；以游戏内任务文字与 inspect 结果为准。
-3. Fish prices / cooking：完成实测价格表，或 GSC 出现 price/cooking 查询后从现有页面拆分。
+3. Fish prices / cooking：已于 2026-09-05 发布。价格表来自 NerdsChalk v1.0.4 与 AllThings.How 列出值；剧情战利品标明不可先卖。以游戏内 F 检视为准。
 
-运维备注（2026-08-30 下午）：含上述改动的 PR 尚未合并到 `main`，生产域名上的 `/guides/co-op-multiplayer`、两站 privacy/terms、GA4 仍未上线。合并后才能在 GSC 请求编入索引。
+运维备注（2026-09-05）：RUNAWAYS 与 Anime Origins 兑换码已按 9 月来源再核。两站仍是原字符串，没有新码。GSC 查询报告仍无法从本环境读取；请在 Search Console 里补请求：
+
+- `https://how-to-fish-guide-mu.vercel.app/guides/quest-items-trophies`
+- `https://how-to-fish-guide-mu.vercel.app/guides/cooking-and-prices`
+- `https://anime-origins-guide-ten.vercel.app/guides/codes`
 
 本关收获文案：
 

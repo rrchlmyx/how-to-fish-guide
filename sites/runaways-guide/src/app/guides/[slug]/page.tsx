@@ -26,7 +26,7 @@ export async function generateMetadata(
       title: guide.title,
       description: guide.description,
       type: "article",
-      modifiedTime: "2026-08-30T00:00:00.000Z",
+      modifiedTime: "2026-09-05T00:00:00.000Z",
     },
   };
 }
@@ -45,7 +45,7 @@ export default async function GuidePage(props: PageProps<"/guides/[slug]">) {
         headline: guide.title,
         description: guide.description,
         datePublished: "2026-08-26",
-        dateModified: "2026-08-30",
+        dateModified: "2026-09-05",
         mainEntityOfPage: pageUrl,
         url: pageUrl,
         author: { "@type": "Organization", name: "State Line" },
